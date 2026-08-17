@@ -1,0 +1,36 @@
+{
+  "name": "FARHAN // Portfolio",
+  "short_name": "FARHAN",
+  "description": "Modder, Cracker, Developer, Gamer — anime-style portfolio.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#07060c",
+  "theme_color": "#ff3358",
+  "categories": [
+    "portfolio",
+    "games",
+    "developer"
+  ],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
