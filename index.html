@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Farhan — Creative Developer, AI Explorer & Tech Enthusiast</title>
+<meta name="description" content="Farhan — Creative Developer, AI Explorer & Tech Enthusiast. Building websites, apps and digital experiences while experimenting with AI and new technology.">
+<meta name="author" content="Farhan">
+<meta property="og:title" content="Farhan — Creative Developer, AI Explorer & Tech Enthusiast">
+<meta property="og:description" content="Building websites, apps and digital experiences while constantly experimenting with new technology.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://farhan098english-art.github.io/farhan-portfolio/">
+<meta property="og:image" content="character.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#090810">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23090810'/%3E%3Ctext x='50' y='72' font-size='62' text-anchor='middle' fill='%23ff3358' font-family='sans-serif' font-weight='bold'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#090810;--bg-2:#0d0b16;
+  --surface:rgba(20,17,31,0.6);--surface-solid:#14111f;
+  --surface-2:rgba(27,23,48,0.5);
+  --border:rgba(255,255,255,0.06);--border-bright:rgba(255,255,255,0.12);
+  --border-accent:rgba(255,51,88,0.25);
+  --text:#f4f1fb;--text-dim:#a89fb8;--text-mute:#6e6688;
+  --crimson:#ff3358;--crimson-dim:rgba(255,51,88,0.10);
+  --rose:#ff6b8a;--amber:#ffb020;--amber-dim:rgba(255,176,32,0.08);
+  --gold:#ffd166;--teal:#2dd4bf;--teal-dim:rgba(45,212,191,0.08);
+  --radius:16px;--radius-sm:10px;
+  --font-body:'Sora',system-ui,sans-serif;--font-mono:'JetBrains Mono','SF Mono',Consolas,monospace;
+  --max-w:1140px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;font-size:16px;background-image:radial-gradient(ellipse 60% 50% at 20% 0%,rgba(255,51,88,0.08) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 80% 100%,rgba(255,176,32,0.05) 0%,transparent 60%);background-attachment:fixed}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:rgba(255,51,88,0.25);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:rgba(255,51,88,0.45)}
+::selection{background:rgba(255,51,88,0.25);color:#fff}
+.glass{background:var(--surface);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:var(--radius)}
+#particles{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.particle{position:absolute;border-radius:50%;background:var(--crimson);opacity:0;animation:floatUp linear infinite}
+@keyframes floatUp{0%{transform:translateY(100vh) translateX(0);opacity:0}10%{opacity:0.3}90%{opacity:0.2}100%{transform:translateY(-10vh) translateX(30px);opacity:0}}
+.cursor-glow{position:fixed;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(255,51,88,0.06) 0%,transparent 70%);pointer-events:none;z-index:1;transform:translate(-50%,-50%);transition:opacity .3s ease;mix-blend-mode:screen}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 5vw;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(9,8,16,0.7);border-bottom:1px solid var(--border);transition:padding .3s ease,background .3s ease}
+nav.scrolled{padding:12px 5vw;background:rgba(9,8,16,0.85)}
+.nav-logo{font-family:var(--font-mono);font-weight:700;font-size:18px;letter-spacing:0.5px;display:flex;align-items:center;gap:6px}
+.nav-logo .accent{color:var(--crimson)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-family:var(--font-mono);font-size:13px;font-weight:500;color:var(--text-dim);transition:color .2s ease;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--crimson);transition:width .25s ease;border-radius:2px}
+.nav-links a:hover{color:var(--text)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-links a.active{color:var(--text)}
+.nav-cta{font-family:var(--font-mono);font-size:13px;font-weight:600;padding:8px 18px;border-radius:var(--radius-sm);background:var(--crimson);color:#fff;transition:transform .15s ease,box-shadow .15s ease}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(255,51,88,0.35)}
+.menu-toggle{display:none;flex-direction:column;gap:5px;padding:4px}
+.menu-toggle span{width:24px;height:2px;background:var(--text);border-radius:2px;transition:all .25s ease}
+.menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle.open span:nth-child(2){opacity:0}
+.menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:860px){
+  .nav-links{position:fixed;top:60px;left:0;right:0;flex-direction:column;gap:0;background:rgba(9,8,16,0.97);backdrop-filter:blur(20px);padding:0;max-height:0;overflow:hidden;transition:max-height .35s ease;border-bottom:1px solid var(--border)}
+  .nav-links.open{max-height:500px;padding:10px 0}
+  .nav-links a{padding:14px 5vw;width:100%;border-bottom:1px solid var(--border)}
+  .nav-links a::after{display:none}
+  .nav-cta{display:none}
+  .menu-toggle{display:flex}
+}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 5vw;position:relative;z-index:2}
+section{padding:100px 0;position:relative;z-index:2}
+.section-head{text-align:center;margin-bottom:60px}
+.section-tag{font-family:var(--font-mono);font-size:12px;font-weight:600;color:var(--crimson);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;display:inline-flex;align-items:center;gap:8px}
+.section-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--crimson)}
+.section-title{font-size:clamp(28px,5vw,46px);font-weight:700;letter-spacing:-1px;line-height:1.1}
+.section-title .accent{color:var(--crimson)}
+.section-sub{color:var(--text-dim);margin-top:12px;font-size:16px;max-width:500px;margin-left:auto;margin-right:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-mono);font-size:14px;font-weight:600;padding:14px 28px;border-radius:var(--radius-sm);transition:all .2s ease;cursor:pointer;white-space:nowrap}
+.btn-primary{background:var(--crimson);color:#fff;box-shadow:0 4px 20px rgba(255,51,88,0.25)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(255,51,88,0.4)}
+.btn-ghost{background:rgba(255,255,255,0.04);color:var(--text);border:1px solid var(--border-bright)}
+.btn-ghost:hover{background:rgba(255,255,255,0.08);border-color:var(--text-dim);transform:translateY(-2px)}
+.btn-amber{background:var(--amber);color:#1a1000}
+.btn-amber:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(255,176,32,0.35)}
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px 5vw 60px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%;max-width:var(--max-w);margin:0 auto}
+.hero-content{z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:20px;background:var(--crimson-dim);border:1px solid var(--border-accent);font-family:var(--font-mono);font-size:12px;color:var(--rose);margin-bottom:24px}
+.hero-badge::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--crimson);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(255,51,88,0.4)}50%{opacity:0.7;box-shadow:0 0 0 6px rgba(255,51,88,0)}}
+.hero h1{font-size:clamp(36px,7vw,64px);font-weight:800;letter-spacing:-2px;line-height:1.05;margin-bottom:16px}
+.hero h1 .wave{display:inline-block;animation:wave 2.5s ease infinite;transform-origin:70% 70%}
+@keyframes wave{0%,100%{transform:rotate(0deg)}10%{transform:rotate(14deg)}20%{transform:rotate(-8deg)}30%{transform:rotate(14deg)}40%{transform:rotate(-4deg)}50%{transform:rotate(10deg)}60%{transform:rotate(0deg)}}
+.hero-subtitle{font-family:var(--font-mono);font-size:clamp(14px,2vw,18px);color:var(--text-dim);margin-bottom:16px;letter-spacing:0.5px}
+.hero-subtitle .accent{color:var(--crimson)}
+.hero-subtitle .amber-accent{color:var(--amber)}
+.hero-desc{color:var(--text-dim);font-size:16px;max-width:480px;margin-bottom:32px;line-height:1.7}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.hero-char{position:relative;display:flex;align-items:center;justify-content:center}
+.hero-char-img{max-width:100%;max-height:480px;border-radius:16px;z-index:2;animation:charFloat 7s ease-in-out infinite;box-shadow:0 8px 40px rgba(0,0,0,0.5)}
+@keyframes charFloat{0%,100%{transform:translateY(0) rotate(0deg)}33%{transform:translateY(-12px) rotate(-0.5deg)}66%{transform:translateY(6px) rotate(0.5deg)}}
+.hero-char-glow{position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(255,51,88,0.08) 0%,rgba(255,176,32,0.04) 40%,transparent 70%);animation:glowBreathe 5s ease-in-out infinite;z-index:0}
+@keyframes glowBreathe{0%,100%{transform:scale(1);opacity:0.4}50%{transform:scale(1.15);opacity:0.6}}
+.hero-char-frame{position:relative;display:flex;align-items:center;justify-content:center;padding:16px}
+.hero-char-frame::before{content:'';position:absolute;inset:0;border-radius:20px;background:linear-gradient(135deg,rgba(255,51,88,0.05),rgba(45,212,191,0.03));backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06);z-index:0}
+.hero-char-particles{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden;border-radius:16px}
+.hero-char-particles span{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--crimson);opacity:0;animation:charParticle 4s ease-in-out infinite}
+.hero-char-particles span:nth-child(1){left:20%;animation-delay:0s;background:var(--crimson)}
+.hero-char-particles span:nth-child(2){left:50%;animation-delay:1s;background:var(--amber)}
+.hero-char-particles span:nth-child(3){left:80%;animation-delay:2s;background:var(--teal)}
+.hero-char-particles span:nth-child(4){left:35%;animation-delay:1.5s;background:var(--rose)}
+.hero-char-particles span:nth-child(5){left:65%;animation-delay:0.5s;background:var(--crimson)}
+@keyframes charParticle{0%{transform:translateY(0) scale(0);opacity:0}20%{opacity:0.6;transform:scale(1)}80%{opacity:0.3}100%{transform:translateY(-80px) scale(0);opacity:0}}
+@media(prefers-reduced-motion:reduce){.hero-char-img{animation:none}.hero-char-glow{animation:none}.hero-char-particles span{display:none}}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:30px;text-align:center}.hero-char{order:-1}.hero-char-img{max-height:350px}.hero-content{max-width:500px;margin:0 auto}.hero-btns{justify-content:center}.hero-desc{margin-left:auto;margin-right:auto}}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.about-card{padding:32px;border-radius:var(--radius)}
+.about-card h3{font-size:20px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.about-card p{color:var(--text-dim);line-height:1.8;margin-bottom:12px}
+.about-card .highlight{color:var(--rose);font-weight:600}
+.about-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.about-tag{padding:4px 12px;border-radius:20px;font-size:12px;font-family:var(--font-mono);background:var(--crimson-dim);color:var(--rose);border:1px solid var(--border-accent)}
+.about-tag.amber{background:var(--amber-dim);color:var(--amber);border-color:rgba(255,176,32,0.2)}
+.about-tag.teal{background:var(--teal-dim);color:var(--teal);border-color:rgba(45,212,191,0.2)}
+.timeline{position:relative;padding-left:32px}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--crimson),var(--amber),transparent)}
+.timeline-item{position:relative;padding-bottom:24px}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-item::before{content:'';position:absolute;left:-28px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--crimson);border:2px solid var(--bg);box-shadow:0 0 0 2px var(--crimson)}
+.timeline-item:nth-child(2)::before{background:var(--amber);box-shadow:0 0 0 2px var(--amber)}
+.timeline-item:nth-child(3)::before{background:var(--teal);box-shadow:0 0 0 2px var(--teal)}
+.timeline-item:nth-child(4)::before{background:var(--rose);box-shadow:0 0 0 2px var(--rose)}
+.timeline-item:nth-child(5)::before{background:var(--gold);box-shadow:0 0 0 2px var(--gold)}
+.timeline-item:nth-child(6)::before{background:transparent;border:2px dashed var(--text-mute);box-shadow:none}
+.timeline-label{font-family:var(--font-mono);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--amber);margin-bottom:4px}
+.timeline-text{color:var(--text-dim);font-size:14px}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:24px}}
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.cards-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.cards-grid{grid-template-columns:1fr}}
+.service-card{padding:28px;border-radius:var(--radius);transition:transform .25s ease,box-shadow .25s ease;cursor:pointer;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--crimson),var(--amber));transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.3)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-icon{font-size:32px;margin-bottom:16px;display:block}
+.service-card h3{font-size:17px;font-weight:700;margin-bottom:8px}
+.service-card p{color:var(--text-dim);font-size:14px;line-height:1.6}
+.filter-bar{display:flex;gap:8px;justify-content:center;margin-bottom:32px;flex-wrap:wrap}
+.filter-btn{padding:8px 18px;border-radius:20px;font-family:var(--font-mono);font-size:12px;font-weight:600;color:var(--text-dim);background:rgba(255,255,255,0.04);border:1px solid var(--border);cursor:pointer;transition:all .2s ease}
+.filter-btn:hover{background:rgba(255,255,255,0.08);color:var(--text)}
+.filter-btn.active{background:var(--crimson);color:#fff;border-color:var(--crimson)}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.projects-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.projects-grid{grid-template-columns:1fr}}
+.project-card{border-radius:var(--radius);overflow:hidden;transition:transform .25s ease,box-shadow .25s ease;cursor:pointer;position:relative}
+.project-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.3)}
+.project-thumb{height:180px;background:var(--surface-2);display:flex;align-items:center;justify-content:center;font-size:48px;position:relative;overflow:hidden}
+.project-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,51,88,0.1),transparent 60%)}
+.project-info{padding:20px}
+.project-name{font-size:17px;font-weight:700;margin-bottom:6px}
+.project-desc{color:var(--text-dim);font-size:13px;line-height:1.5;margin-bottom:12px}
+.project-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.project-tag{padding:3px 10px;border-radius:12px;font-size:11px;font-family:var(--font-mono);background:var(--crimson-dim);color:var(--rose)}
+.project-tag.amber{background:var(--amber-dim);color:var(--amber)}
+.project-tag.teal{background:var(--teal-dim);color:var(--teal)}
+.project-links{display:flex;gap:8px}
+.project-link{padding:6px 14px;border-radius:8px;font-size:12px;font-weight:600;font-family:var(--font-mono);display:inline-flex;align-items:center;gap:4px;transition:all .15s ease}
+.project-link.demo{background:var(--crimson);color:#fff}
+.project-link.demo:hover{background:#ff1a4a}
+.project-link.code{background:rgba(255,255,255,0.06);border:1px solid var(--border-bright);color:var(--text-dim)}
+.project-link.code:hover{color:var(--text);border-color:var(--text-dim)}
+.ai-lab{background:linear-gradient(135deg,rgba(255,51,88,0.04),rgba(45,212,191,0.03));border-radius:var(--radius);padding:60px 40px;position:relative;overflow:hidden}
+.ai-core{width:120px;height:120px;margin:0 auto 40px;position:relative;display:flex;align-items:center;justify-content:center}
+.ai-core-ring{position:absolute;border-radius:50%;border:2px solid;animation:ai-spin 8s linear infinite}
+.ai-core-ring:nth-child(1){width:120px;height:120px;border-color:var(--crimson);opacity:0.3}
+.ai-core-ring:nth-child(2){width:90px;height:90px;border-color:var(--amber);opacity:0.4;animation-duration:6s;animation-direction:reverse}
+.ai-core-ring:nth-child(3){width:60px;height:60px;border-color:var(--teal);opacity:0.5;animation-duration:4s}
+.ai-core-center{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle,var(--crimson),var(--amber));animation:ai-pulse 2s ease infinite;z-index:2}
+@keyframes ai-spin{to{transform:rotate(360deg)}}
+@keyframes ai-pulse{0%,100%{transform:scale(1);box-shadow:0 0 20px rgba(255,51,88,0.4)}50%{transform:scale(1.2);box-shadow:0 0 30px rgba(255,176,32,0.5)}}
+.ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:800px;margin:0 auto}
+@media(max-width:768px){.ai-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.ai-grid{grid-template-columns:1fr}}
+.ai-item{padding:20px;border-radius:var(--radius-sm);text-align:center;transition:transform .2s ease}
+.ai-item:hover{transform:translateY(-3px)}
+.ai-item-icon{font-size:28px;margin-bottom:8px}
+.ai-item h4{font-size:14px;font-weight:600;margin-bottom:4px}
+.ai-item p{font-size:12px;color:var(--text-mute)}
+.tech-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:768px){.tech-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:400px){.tech-grid{grid-template-columns:1fr}}
+.tech-badge{padding:24px 16px;border-radius:var(--radius-sm);text-align:center;transition:transform .2s ease;border:1px solid var(--border)}
+.tech-badge:hover{transform:translateY(-4px);border-color:var(--border-bright)}
+.tech-badge .tech-icon{font-size:36px;margin-bottom:8px;display:block}
+.tech-badge .tech-name{font-family:var(--font-mono);font-size:13px;font-weight:600}
+.tech-badge .tech-desc{font-size:11px;color:var(--text-mute);margin-top:4px}
+.github-section{text-align:center}
+.github-card{padding:40px;border-radius:var(--radius);max-width:600px;margin:0 auto}
+.github-stats{display:flex;justify-content:center;gap:40px;margin:24px 0}
+.github-stat{text-align:center}
+.github-stat .num{font-size:32px;font-weight:800;color:var(--crimson);font-family:var(--font-mono)}
+.github-stat .label{font-size:12px;color:var(--text-mute);text-transform:uppercase;letter-spacing:1px}
+.repo-list{display:grid;gap:12px;margin:24px 0}
+.repo-item{display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:var(--radius-sm);background:rgba(255,255,255,0.03);border:1px solid var(--border);transition:all .2s ease;text-align:left}
+.repo-item:hover{background:rgba(255,255,255,0.06);border-color:var(--border-bright)}
+.repo-icon{font-size:20px}
+.repo-name{font-family:var(--font-mono);font-weight:600;font-size:14px}
+.repo-meta{font-size:12px;color:var(--text-mute);margin-left:auto;white-space:nowrap}
+.currently-building{padding:32px;border-radius:var(--radius);max-width:600px;margin:0 auto;border:1px solid var(--border-accent);background:var(--crimson-dim)}
+.build-status{display:inline-flex;align-items:center;gap:8px;padding:4px 12px;border-radius:20px;font-family:var(--font-mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;background:rgba(255,176,32,0.15);color:var(--amber);border:1px solid rgba(255,176,32,0.3)}
+.build-status::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--amber);animation:pulse 1.5s ease infinite}
+.build-title{font-size:22px;font-weight:700;margin:16px 0 8px}
+.build-desc{color:var(--text-dim);font-size:14px;line-height:1.6}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:768px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+.stat-card{padding:28px 16px;border-radius:var(--radius);text-align:center}
+.stat-num{font-size:36px;font-weight:800;font-family:var(--font-mono);color:var(--crimson);margin-bottom:4px}
+.stat-label{font-size:12px;color:var(--text-mute);text-transform:uppercase;letter-spacing:1px}
+.contact{text-align:center;padding:120px 0}
+.contact h2{font-size:clamp(32px,6vw,52px);font-weight:800;letter-spacing:-1px;margin-bottom:16px}
+.contact h2 .accent{color:var(--crimson)}
+.contact p{color:var(--text-dim);max-width:500px;margin:0 auto 32px;font-size:16px}
+.contact-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
+.contact-link{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:var(--radius-sm);background:rgba(255,255,255,0.04);border:1px solid var(--border-bright);font-family:var(--font-mono);font-size:13px;font-weight:500;transition:all .2s ease}
+.contact-link:hover{transform:translateY(-2px);border-color:var(--text-dim)}
+.contact-link svg{width:18px;height:18px;fill:currentColor}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.tilt-card{transition:transform .15s ease;transform-style:preserve-3d}
+.creator-section{text-align:center}
+.creator-card{padding:40px;border-radius:var(--radius);max-width:600px;margin:0 auto;border:1px solid rgba(255,176,32,0.2);background:linear-gradient(135deg,rgba(255,176,32,0.04),rgba(255,51,88,0.02))}
+.creator-name{font-size:28px;font-weight:800;letter-spacing:-0.5px;margin:16px 0 8px;color:var(--amber)}
+.creator-tag{font-family:var(--font-mono);font-size:13px;color:var(--text-dim);margin-bottom:16px}
+.creator-desc{color:var(--text-dim);font-size:14px;max-width:400px;margin:0 auto 24px;line-height:1.6}
+@media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms!important;transition-duration:0.01ms!important}.particle{display:none}.cursor-glow{display:none}}
+footer{text-align:center;padding:40px 5vw;border-top:1px solid var(--border);color:var(--text-mute);font-size:13px}
+footer .heart{color:var(--crimson)}
+.modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(5,4,10,0.8);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.show{display:flex}
+.modal{max-width:600px;width:100%;background:var(--surface-solid);border:1px solid var(--border-bright);border-radius:var(--radius);padding:32px;max-height:85vh;overflow-y:auto}
+.modal-close{float:right;font-size:24px;color:var(--text-mute);cursor:pointer;transition:color .15s}
+.modal-close:hover{color:var(--text)}
+.modal h3{font-size:22px;font-weight:700;margin-bottom:16px}
+.modal-thumb{height:200px;border-radius:var(--radius-sm);background:var(--surface-2);display:flex;align-items:center;justify-content:center;font-size:48px;margin-bottom:16px}
+.modal-section{margin-bottom:16px}
+.modal-section h4{font-size:13px;font-weight:600;color:var(--amber);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.modal-section p{color:var(--text-dim);font-size:14px;line-height:1.6}
+.modal-tags{display:flex;flex-wrap:wrap;gap:6px}
+.modal-links{display:flex;gap:8px;margin-top:16px}
+</style>
+</head>
+<body>
+<div class="cursor-glow" id="cursorGlow"></div>
+<div id="particles"></div>
+
+<nav id="navbar">
+  <div class="nav-logo">FARHAN<span class="accent">.</span></div>
+  <div class="nav-links" id="navLinks">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#ai-lab">AI Lab</a>
+    <a href="#tech-lab">Tech Lab</a>
+    <a href="#creator">Creator</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="nav-cta">Let's Talk</a>
+  <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge">AVAILABLE FOR COLLABS</div>
+      <h1>Hi, I'm Farhan <span class="wave">&#128075;</span></h1>
+      <div class="hero-subtitle"><span class="accent">Creative Developer</span> &bull; <span class="amber-accent">AI Explorer</span> &bull; Tech Enthusiast</div>
+      <p class="hero-desc">I build websites, apps and digital experiences while constantly experimenting with new technology. Breaking things apart to understand how they work, then rebuilding them better.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">Explore My Work</a>
+        <a href="#contact" class="btn btn-ghost">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-char">
+      <div class="hero-char-frame">
+        <div class="hero-char-glow"></div>
+        <div class="hero-char-particles"><span></span><span></span><span></span><span></span><span></span></div>
+        <img src="character.webp" alt="Farhan's anime character" class="hero-char-img" loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">About Me</div>
+      <h2 class="section-title">A glimpse into what <span class="accent">drives me</span></h2>
+      <p class="section-sub">What I build, what I learn, and what I'm exploring.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-card glass reveal">
+        <h3>&#9881; What I Do</h3>
+        <p>I'm Farhan — a self-taught <span class="highlight">modder, cracker, developer, and gamer</span>. I live at the intersection of curiosity and code, where the urge to tear software apart meets the discipline to build something new from the pieces.</p>
+        <p>As a <span class="highlight">modder</span>, I take games apart and reshape them. As a <span class="highlight">cracker</span>, I reverse-engineer binaries to understand protection schemes. As a <span class="highlight">developer</span>, I build tools and apps that solve real problems.</p>
+        <div class="about-tags">
+          <span class="about-tag">Web Development</span>
+          <span class="about-tag amber">AI Experiments</span>
+          <span class="about-tag teal">Reverse Engineering</span>
+          <span class="about-tag">Gaming</span>
+          <span class="about-tag amber">UI/UX Design</span>
+        </div>
+      </div>
+      <div class="about-card glass reveal">
+        <h3>&#128640; My Journey</h3>
+        <div class="timeline">
+          <div class="timeline-item"><div class="timeline-label">Started</div><div class="timeline-text">Curiosity-driven exploration of how software and games work</div></div>
+          <div class="timeline-item"><div class="timeline-label">Learned</div><div class="timeline-text">Python, JavaScript, HTML/CSS, and reverse engineering tools</div></div>
+          <div class="timeline-item"><div class="timeline-label">Built</div><div class="timeline-text">Game mods, tools, bots, and web applications</div></div>
+          <div class="timeline-item"><div class="timeline-label">Experimenting</div><div class="timeline-text">AI-assisted development and creative coding workflows</div></div>
+          <div class="timeline-item"><div class="timeline-label">Improving</div><div class="timeline-text">Modern web frameworks, UI/UX, and advanced RE techniques</div></div>
+          <div class="timeline-item"><div class="timeline-label">Future</div><div class="timeline-text">Building more digital experiences and exploring AI deeper</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I DO -->
+<section id="what-i-do">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">What I Do</div>
+      <h2 class="section-title">Six things I'm <span class="accent">passionate</span> about</h2>
+    </div>
+    <div class="cards-grid">
+      <div class="service-card glass reveal tilt-card"><span class="service-icon">&#127760;</span><h3>Web Development</h3><p>Building responsive, fast websites with HTML, CSS, and JavaScript. From portfolios to full web apps.</p></div>
+      <div class="service-card glass reveal tilt-card"><span class="service-icon">&#128241;</span><h3>App Development</h3><p>Creating web-based apps and tools — including real-time chat apps and interactive experiences.</p></div>
+      <div class="service-card glass reveal tilt-card"><span class="service-icon">&#129302;</span><h3>AI Experiments</h3><p>Exploring AI-assisted development, prompt engineering, and building AI-powered features into apps.</p></div>
+      <div class="service-card glass reveal tilt-card"><span class="service-icon">&#127912;</span><h3>UI/UX & Creative Design</h3><p>Designing clean, intuitive interfaces with glassmorphism, dark themes, and anime-inspired aesthetics.</p></div>
+      <div class="service-card glass reveal tilt-card"><span class="service-icon">&#127918;</span><h3>Gaming & Technology</h3><p>Game modding, reverse engineering, and exploring how games work under the hood. PlayStation enthusiast.</p></div>
+      <div class="service-card glass reveal tilt-card"><span class="service-icon">&#128640;</span><h3>Digital Projects</h3><p>Building digital experiences — from FPS games to real-time messaging platforms hosted on GitHub Pages.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Featured Projects</div>
+      <h2 class="section-title">Selected <span class="accent">Work</span></h2>
+      <p class="section-sub">Real projects, live demos, and source code. Click any project for details.</p>
+    </div>
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="websites">Websites</button>
+      <button class="filter-btn" data-filter="apps">Apps</button>
+      <button class="filter-btn" data-filter="ai">AI</button>
+      <button class="filter-btn" data-filter="experiments">Experiments</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid">
+      <div class="project-card glass reveal" data-category="websites" onclick="openModal('portfolio')">
+        <div class="project-thumb">&#127760;</div>
+        <div class="project-info">
+          <div class="project-name">Portfolio Website</div>
+          <div class="project-desc">Premium anime-inspired portfolio with glassmorphism, particles, and interactive sections.</div>
+          <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JavaScript</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/" target="_blank" class="project-link demo">Live Demo</a>
+            <a href="https://github.com/farhan098english-art/farhan-portfolio" target="_blank" class="project-link code">Source</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="apps" onclick="openModal('chat')">
+        <div class="project-thumb">&#128172;</div>
+        <div class="project-info">
+          <div class="project-name">Farhan Chat</div>
+          <div class="project-desc">Real-time WhatsApp-style messaging app with Google login, groups, reactions, voice messages, and AI features.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Firebase</span><span class="project-tag teal">Real-time</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/Farhan-chat/" target="_blank" class="project-link demo">Live Demo</a>
+            <a href="https://github.com/farhan098english-art/Farhan-chat" target="_blank" class="project-link code">Source</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="experiments" onclick="openModal('fps')">
+        <div class="project-thumb">&#127918;</div>
+        <div class="project-info">
+          <div class="project-name">FPS Shooter Game</div>
+          <div class="project-desc">Browser-based 3D first-person shooter with AI enemies, built using Three.js.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Three.js</span><span class="project-tag">3D</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/" target="_blank" class="project-link demo">Play</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="experiments" onclick="openModal('devicekey')">
+        <div class="project-thumb">&#128273;</div>
+        <div class="project-info">
+          <div class="project-name">Device Key</div>
+          <div class="project-desc">A utility tool hosted on GitHub Pages. Explore the repository for more details.</div>
+          <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">Tool</span></div>
+          <div class="project-links">
+            <a href="https://github.com/farhan098english-art/Device-key" target="_blank" class="project-link code">Source</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="experiments" onclick="openModal('modtoolkit')">
+        <div class="project-thumb">&#9881;</div>
+        <div class="project-info">
+          <div class="project-name">Game Mod Toolkit</div>
+          <div class="project-desc">A modular toolkit for patching game files, swapping assets, and injecting custom content.</div>
+          <div class="project-tags"><span class="project-tag amber">Python</span><span class="project-tag">Modding</span></div>
+          <div class="project-links">
+            <a href="https://t.me/Flexxcheat" target="_blank" class="project-link code">Telegram</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="experiments" onclick="openModal('binalyzer')">
+        <div class="project-thumb">&#128270;</div>
+        <div class="project-info">
+          <div class="project-name">Bin Analyzer</div>
+          <div class="project-desc">Reverse engineering tool for analyzing binaries and understanding protection schemes.</div>
+          <div class="project-tags"><span class="project-tag amber">Python</span><span class="project-tag teal">RE</span></div>
+          <div class="project-links">
+            <a href="https://t.me/Flexxcheat" target="_blank" class="project-link code">Telegram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI LAB -->
+<section id="ai-lab">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">AI Lab</div>
+      <h2 class="section-title">AI <span class="accent">Experiments</span> &#129302;</h2>
+      <p class="section-sub">Exploring the intersection of AI and creative development.</p>
+    </div>
+    <div class="ai-lab glass reveal">
+      <div class="ai-core">
+        <div class="ai-core-ring"></div>
+        <div class="ai-core-ring"></div>
+        <div class="ai-core-ring"></div>
+        <div class="ai-core-center"></div>
+      </div>
+      <div class="ai-grid">
+        <div class="ai-item glass"><div class="ai-item-icon">&#127760;</div><h4>AI Website Creation</h4><p>Using AI to assist in building websites and apps</p></div>
+        <div class="ai-item glass"><div class="ai-item-icon">&#10024;</div><h4>AI Experiments</h4><p>Testing AI-powered features in real projects</p></div>
+        <div class="ai-item glass"><div class="ai-item-icon">&#129302;</div><h4>AI-Assisted Dev</h4><p>Integrating AI into development workflows</p></div>
+        <div class="ai-item glass"><div class="ai-item-icon">&#128172;</div><h4>AI in Chat App</h4><p>Reply suggestions, text improvement, voice-to-text</p></div>
+        <div class="ai-item glass"><div class="ai-item-icon">&#128221;</div><h4>Prompt Engineering</h4><p>Crafting effective prompts for better AI output</p></div>
+        <div class="ai-item glass"><div class="ai-item-icon">&#128161;</div><h4>AI-Powered Ideas</h4><p>Exploring new ways AI can enhance digital experiences</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH & GAMING LAB -->
+<section id="tech-lab">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Tech & Gaming Lab</div>
+      <h2 class="section-title">Gaming & <span class="accent">Technology</span> &#127918;</h2>
+      <p class="section-sub">Where gaming meets technology and experimentation.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="service-card glass reveal"><span class="service-icon">&#127918;</span><h3>Gaming & Mods</h3><p>PlayStation gaming, game modding, and exploring how games work under the hood. Competitive FPS, open-world RPGs, and indie gems.</p></div>
+      <div class="service-card glass reveal"><span class="service-icon">&#128187;</span><h3>Performance & Experiments</h3><p>Reverse engineering tools — Ghidra, IDA, x64dbg. Analyzing binaries and understanding protection schemes.</p></div>
+      <div class="service-card glass reveal"><span class="service-icon">&#127911;</span><h3>Graphics & Visuals</h3><p>Building 3D experiences with Three.js, anime-inspired UI design, and visual experimentation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CREATOR -->
+<section id="creator">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Creator Mode</div>
+      <h2 class="section-title">Creator <span class="accent">Identity</span> &#127909;</h2>
+    </div>
+    <div class="creator-section">
+      <div class="creator-card glass reveal">
+        <div style="font-size:48px">&#127909;</div>
+        <div class="creator-name">VEGETAISLIVE</div>
+        <div class="creator-tag">Gaming Content &bull; Creative Experiments</div>
+        <p class="creator-desc">Gaming content, creative experiments, and tech exploration. From gaming sessions to building digital experiences — this is the creator side of Farhan.</p>
+        <a href="https://t.me/Flexxcheat" target="_blank" class="btn btn-amber">Connect with Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section id="skills">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Tech Stack</div>
+      <h2 class="section-title">Technologies I <span class="accent">work with</span></h2>
+      <p class="section-sub">Tools and technologies I use every day.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-badge glass reveal"><span class="tech-icon">&#60;/&#62;</span><div class="tech-name">HTML</div><div class="tech-desc">Semantic markup</div></div>
+      <div class="tech-badge glass reveal"><span class="tech-icon">&#127912;</span><div class="tech-name">CSS</div><div class="tech-desc">Styling & layout</div></div>
+      <div class="tech-badge glass reveal"><span class="tech-icon">&#9881;</span><div class="tech-name">JavaScript</div><div class="tech-desc">Interactivity & apps</div></div>
+      <div class="tech-badge glass reveal"><span class="tech-icon">&#128013;</span><div class="tech-name">Python</div><div class="tech-desc">Automation & bots</div></div>
+      <div class="tech-badge glass reveal"><span class="tech-icon">&#128279;</span><div class="tech-name">Git</div><div class="tech-desc">Version control</div></div>
+      <div class="tech-badge glass reveal"><span class="tech-icon">&#128736;</span><div class="tech-name">GitHub</div><div class="tech-desc">Collaboration</div></div>
+      <div class="tech-badge glass reveal"><span class="tech-icon">&#129504;</span><div class="tech-name">AI Tools</div><div class="tech-desc">AI-assisted dev</div></div>
+      <div class="tech-badge glass reveal"><span class="tech-icon">&#128064;</span><div class="tech-name">UI/UX</div><div class="tech-desc">Design thinking</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GITHUB -->
+<section id="github">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">GitHub</div>
+      <h2 class="section-title">My <span class="accent">GitHub</span></h2>
+    </div>
+    <div class="github-card glass reveal">
+      <div style="font-size:48px;margin-bottom:16px">&#128187;</div>
+      <div class="github-stats">
+        <div class="github-stat"><div class="num">3</div><div class="label">Public Repos</div></div>
+        <div class="github-stat"><div class="num">3</div><div class="label">Live Sites</div></div>
+        <div class="github-stat"><div class="num">8+</div><div class="label">Technologies</div></div>
+      </div>
+      <div class="repo-list">
+        <a href="https://github.com/farhan098english-art/farhan-portfolio" target="_blank" class="repo-item">
+          <span class="repo-icon">&#127760;</span>
+          <div><div class="repo-name">farhan-portfolio</div><div style="font-size:12px;color:var(--text-mute)">Portfolio website</div></div>
+          <span class="repo-meta">HTML</span>
+        </a>
+        <a href="https://github.com/farhan098english-art/Farhan-chat" target="_blank" class="repo-item">
+          <span class="repo-icon">&#128172;</span>
+          <div><div class="repo-name">Farhan-chat</div><div style="font-size:12px;color:var(--text-mute)">Real-time chat app</div></div>
+          <span class="repo-meta">HTML</span>
+        </a>
+        <a href="https://github.com/farhan098english-art/Device-key" target="_blank" class="repo-item">
+          <span class="repo-icon">&#128273;</span>
+          <div><div class="repo-name">Device-key</div><div style="font-size:12px;color:var(--text-mute)">Utility tool</div></div>
+          <span class="repo-meta">HTML</span>
+        </a>
+      </div>
+      <a href="https://github.com/farhan098english-art" target="_blank" class="btn btn-primary">View My GitHub &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- CURRENTLY BUILDING -->
+<section id="building">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Currently Building</div>
+      <h2 class="section-title">What I'm <span class="accent">working on</span> &#128679;</h2>
+    </div>
+    <div class="currently-building reveal">
+      <div class="build-status">IN PROGRESS</div>
+      <div class="build-title">Farhan Chat — AI-Powered Messaging App</div>
+      <div class="build-desc">A real-time WhatsApp-style chat app with Google login, groups, reactions, voice messages, polls, scheduled messages, AI reply suggestions, text improvement, and voice-to-text. Built with Firebase and vanilla JavaScript.</div>
+      <div style="margin-top:16px"><a href="https://farhan098english-art.github.io/Farhan-chat/" target="_blank" class="btn btn-ghost">View Live Demo</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Stats</div>
+      <h2 class="section-title">By the <span class="accent">numbers</span></h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card glass reveal"><div class="stat-num">3</div><div class="stat-label">GitHub Repos</div></div>
+      <div class="stat-card glass reveal"><div class="stat-num">3</div><div class="stat-label">Live Projects</div></div>
+      <div class="stat-card glass reveal"><div class="stat-num">8+</div><div class="stat-label">Technologies</div></div>
+      <div class="stat-card glass reveal"><div class="stat-num">1</div><div class="stat-label">Year Coding</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>Let's Build Something <span class="accent">Awesome.</span></h2>
+    <p>Have a project in mind? Want to collaborate? Let's talk.</p>
+    <div class="contact-links">
+      <a href="mailto:farhan098english@gmail.com" class="contact-link">&#9993; farhan098english@gmail.com</a>
+      <a href="https://github.com/farhan098english-art" target="_blank" class="contact-link"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+      <a href="https://t.me/Flexxcheat" target="_blank" class="contact-link">&#9992; Telegram</a>
+      <a href="https://discord.com/users/farhan062262" target="_blank" class="contact-link">&#127881; Discord</a>
+    </div>
+    <div class="hero-btns" style="justify-content:center">
+      <a href="mailto:farhan098english@gmail.com" class="btn btn-primary">Contact Me</a>
+      <a href="https://github.com/farhan098english-art" target="_blank" class="btn btn-ghost">View GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT MODAL -->
+<div class="modal-overlay" id="projectModal" onclick="if(event.target===this)this.classList.remove('show')">
+  <div class="modal" id="modalContent">
+    <span class="modal-close" onclick="document.getElementById('projectModal').classList.remove('show')">&times;</span>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<footer>
+  Built with <span class="heart">&hearts;</span> by Farhan &bull; Creative Developer, AI Explorer & Tech Enthusiast
+</footer>
+
+<script>
+// NAVBAR SCROLL
+var navbar=document.getElementById('navbar');
+window.addEventListener('scroll',function(){if(window.scrollY>30)navbar.classList.add('scrolled');else navbar.classList.remove('scrolled');});
+
+// MOBILE MENU
+var menuToggle=document.getElementById('menuToggle');
+var navLinks=document.getElementById('navLinks');
+menuToggle.addEventListener('click',function(){menuToggle.classList.toggle('open');navLinks.classList.toggle('open');});
+navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menuToggle.classList.remove('open');navLinks.classList.remove('open');});});
+
+// ACTIVE NAV LINK
+var sections=document.querySelectorAll('section[id]');
+var navItems=document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',function(){
+  var current='';
+  sections.forEach(function(s){if(window.scrollY>=s.offsetTop-100)current=s.id;});
+  navItems.forEach(function(a){a.classList.remove('active');if(a.getAttribute('href')==='#'+current)a.classList.add('active');});
+});
+
+// PARTICLES
+var particlesContainer=document.getElementById('particles');
+for(var i=0;i<25;i++){
+  var p=document.createElement('div');
+  p.className='particle';
+  var size=Math.random()*4+2;
+  p.style.width=size+'px';p.style.height=size+'px';
+  p.style.left=Math.random()*100+'%';
+  p.style.animationDuration=(Math.random()*15+10)+'s';
+  p.style.animationDelay=Math.random()*10+'s';
+  if(Math.random()>0.5)p.style.background='var(--amber)';
+  particlesContainer.appendChild(p);
+}
+
+// CURSOR GLOW
+var cursorGlow=document.getElementById('cursorGlow');
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.addEventListener('mousemove',function(e){cursorGlow.style.left=e.clientX+'px';cursorGlow.style.top=e.clientY+'px';});
+}else{cursorGlow.style.display='none';}
+
+// SCROLL REVEAL
+var revealEls=document.querySelectorAll('.reveal');
+var revealObserver=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');revealObserver.unobserve(e.target);}});
+},{threshold:0.1});
+revealEls.forEach(function(el){revealObserver.observe(el);});
+
+// PROJECT FILTERS
+var filterBtns=document.querySelectorAll('.filter-btn');
+var projectCards=document.querySelectorAll('.project-card');
+filterBtns.forEach(function(btn){
+  btn.addEventListener('click',function(){
+    filterBtns.forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    var filter=btn.dataset.filter;
+    projectCards.forEach(function(card){
+      if(filter==='all'||card.dataset.category===filter){card.style.display='block';}
+      else{card.style.display='none';}
+    });
+  });
+});
+
+// 3D TILT
+var tiltCards=document.querySelectorAll('.tilt-card');
+tiltCards.forEach(function(card){
+  card.addEventListener('mousemove',function(e){
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    var rect=card.getBoundingClientRect();
+    var x=e.clientX-rect.left;
+    var y=e.clientY-rect.top;
+    var cx=rect.width/2,cy=rect.height/2;
+    var rx=((y-cy)/cy)*-5;
+    var ry=((x-cx)/cx)*5;
+    card.style.transform='perspective(800px) rotateX('+rx+'deg) rotateY('+ry+'deg) translateY(-4px)';
+  });
+  card.addEventListener('mouseleave',function(){card.style.transform='';});
+});
+
+// MAGNETIC BUTTONS
+document.querySelectorAll('.btn-primary,.nav-cta').forEach(function(btn){
+  btn.addEventListener('mousemove',function(e){
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    var rect=btn.getBoundingClientRect();
+    var x=e.clientX-rect.left-rect.width/2;
+    var y=e.clientY-rect.top-rect.height/2;
+    btn.style.transform='translate('+(x*0.15)+'px,'+(y*0.15)+'px)';
+  });
+  btn.addEventListener('mouseleave',function(){btn.style.transform='';});
+});
+
+// PROJECT MODAL
+var projectData={
+  portfolio:{name:'Portfolio Website',icon:'&#127760;',desc:'Premium anime-inspired portfolio website built with HTML, CSS, and JavaScript. Features glassmorphism design, particle animations, scroll reveal effects, 3D tilt cards, and fully responsive layout.',features:['Glassmorphism UI design','Particle background animation','Scroll reveal animations','3D tilt cards','Magnetic buttons','Fully responsive','SEO optimized','Dark futuristic theme'],tech:['HTML','CSS','JavaScript'],role:'Designer & Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/',code:'https://github.com/farhan098english-art/farhan-portfolio'},
+  chat:{name:'Farhan Chat',icon:'&#128172;',desc:'Real-time WhatsApp-style messaging app with Google Sign-In, group chat, reactions, voice messages, polls, AI features, and more. Built with Firebase Realtime Database.',features:['Google Sign-In authentication','Real-time messaging','Group chat with admin roles','Message reactions (7 emojis)','Voice messages with playback','In-chat message search','Scheduled messages','AI reply suggestions','Text improvement & translation','Voice-to-text (Web Speech API)','Block/report users','Profile QR codes','10 chat backgrounds','500+ emojis','Status/Story feature'],tech:['JavaScript','Firebase','HTML','CSS'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/Farhan-chat/',code:'https://github.com/farhan098english-art/Farhan-chat'},
+  fps:{name:'FPS Shooter Game',icon:'&#127918;',desc:'Browser-based 3D first-person shooter game with AI enemies, built using Three.js. Features pointer lock controls, enemy AI, and medium graphics settings.',features:['3D first-person view','AI enemy combat','Pointer lock controls','Three.js rendering','Shooting mechanics','Crosshair UI'],tech:['JavaScript','Three.js','HTML'],role:'Game Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/',code:''},
+  devicekey:{name:'Device Key',icon:'&#128273;',desc:'A utility tool hosted on GitHub Pages. Repository contains the source code and documentation.',features:['GitHub Pages hosted','Utility tool'],tech:['HTML'],role:'Developer',demo:'',code:'https://github.com/farhan098english-art/Device-key'},
+  modtoolkit:{name:'Game Mod Toolkit',icon:'&#9881;',desc:'A modular toolkit for patching game files, swapping assets, and injecting custom content without breaking online checks.',features:['Game file patching','Asset swapping','Custom content injection','Modular design'],tech:['Python'],role:'Developer',demo:'',code:''},
+  binalyzer:{name:'Bin Analyzer',icon:'&#128270;',desc:'Reverse engineering tool for analyzing binaries and understanding protection schemes.',features:['Binary analysis','Protection scheme detection','Reverse engineering workflow'],tech:['Python'],role:'Developer',demo:'',code:''}
+};
+
+function openModal(key){
+  var p=projectData[key];if(!p)return;
+  var body=document.getElementById('modalBody');
+  var html='<div class="modal-thumb">'+p.icon+'</div>';
+  html+='<h3>'+p.name+'</h3>';
+  html+='<div class="modal-section"><h4>Description</h4><p>'+p.desc+'</p></div>';
+  html+='<div class="modal-section"><h4>Key Features</h4><ul style="padding-left:20px">';
+  p.features.forEach(function(f){html+='<li style="color:var(--text-dim);font-size:14px;margin-bottom:4px">'+f+'</li>';});
+  html+='</ul></div>';
+  html+='<div class="modal-section"><h4>Technologies</h4><div class="modal-tags">';
+  p.tech.forEach(function(t){html+='<span class="project-tag">'+t+'</span>';});
+  html+='</div></div>';
+  html+='<div class="modal-section"><h4>My Role</h4><p>'+p.role+'</p></div>';
+  html+='<div class="modal-links">';
+  if(p.demo)html+='<a href="'+p.demo+'" target="_blank" class="btn btn-primary">Live Demo</a>';
+  if(p.code)html+='<a href="'+p.code+'" target="_blank" class="btn btn-ghost">Source Code</a>';
+  html+='</div>';
+  body.innerHTML=html;
+  document.getElementById('projectModal').classList.add('show');
+}
+</script>
+</body>
+</html>
