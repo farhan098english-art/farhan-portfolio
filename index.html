@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Farhan — Creative Developer, AI Explorer & Tech Enthusiast</title>
+<meta name="description" content="Farhan — Creative Developer, AI Explorer & Tech Enthusiast. Available for freelance web development, UI/UX design and AI-powered projects. View my work and let's build something together.">
+<meta name="author" content="Farhan">
+<meta property="og:title" content="Farhan — Creative Developer, AI Explorer & Tech Enthusiast">
+<meta property="og:description" content="Building websites, apps and digital experiences while constantly experimenting with new technology.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://farhan098english-art.github.io/farhan-portfolio/">
+<meta property="og:image" content="character.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#090810">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23090810'/%3E%3Ctext x='50' y='72' font-size='62' text-anchor='middle' fill='%23ff3358' font-family='sans-serif' font-weight='bold'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#08070d;--bg-2:#0d0b16;
+  /* Liquid Glass Design System */
+  --glass-base:rgba(255,255,255,0.04);
+  --glass-surface:rgba(255,255,255,0.045);
+  --glass-strong:rgba(255,255,255,0.07);
+  --glass-subtle:rgba(255,255,255,0.025);
+  --glass-blur:blur(20px) saturate(180%);
+  --glass-blur-strong:blur(32px) saturate(200%);
+  --glass-blur-subtle:blur(12px) saturate(150%);
+  --glass-border:rgba(255,255,255,0.08);
+  --glass-border-bright:rgba(255,255,255,0.15);
+  --glass-border-accent:rgba(255,51,88,0.2);
+  --glass-highlight:rgba(255,255,255,0.08);
+  --glass-shadow:0 8px 32px rgba(0,0,0,0.3);
+  --glass-shadow-hover:0 16px 48px rgba(0,0,0,0.4);
+  --glass-radius:20px;
+  --glass-radius-sm:14px;
+  --glass-radius-xs:10px;
+  --glass-inner-glow:inset 0 1px 0 rgba(255,255,255,0.08),inset 0 -1px 0 rgba(0,0,0,0.1);
+  --glass-outer-glow:0 0 0 1px rgba(255,255,255,0.03);
+  /* Legacy aliases (for existing CSS) */
+  --surface:rgba(255,255,255,0.04);--surface-solid:#0f0d18;
+  --surface-2:rgba(255,255,255,0.025);
+  --border:rgba(255,255,255,0.08);--border-bright:rgba(255,255,255,0.15);
+  --border-accent:rgba(255,51,88,0.2);
+  --text:#f4f1fb;--text-dim:#b0a8c0;--text-mute:#6e6688;
+  --crimson:#ff3358;--crimson-dim:rgba(255,51,88,0.10);
+  --rose:#ff6b8a;--amber:#ffb020;--amber-dim:rgba(255,176,32,0.08);
+  --gold:#ffd166;--teal:#2dd4bf;--teal-dim:rgba(45,212,191,0.08);
+  --radius:20px;--radius-sm:14px;
+  --font-body:'Sora',system-ui,sans-serif;--font-mono:'JetBrains Mono','SF Mono',Consolas,monospace;
+  --max-w:1140px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;font-size:16px}
+/* Ambient background — large soft color fields for glass to react to */
+.bg-ambient{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.bg-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.4}
+.bg-orb-1{width:500px;height:500px;background:radial-gradient(circle,rgba(255,51,88,0.15),transparent 70%);top:-100px;left:-100px;animation:bgFloat1 20s ease-in-out infinite}
+.bg-orb-2{width:400px;height:400px;background:radial-gradient(circle,rgba(255,176,32,0.1),transparent 70%);bottom:-50px;right:-50px;animation:bgFloat2 25s ease-in-out infinite}
+.bg-orb-3{width:300px;height:300px;background:radial-gradient(circle,rgba(45,212,191,0.08),transparent 70%);top:40%;left:60%;animation:bgFloat3 18s ease-in-out infinite}
+.bg-orb-4{width:350px;height:350px;background:radial-gradient(circle,rgba(124,92,252,0.08),transparent 70%);top:60%;left:10%;animation:bgFloat1 22s ease-in-out infinite reverse}
+@keyframes bgFloat1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(60px,40px) scale(1.1)}}
+@keyframes bgFloat2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-50px,-30px) scale(0.9)}}
+@keyframes bgFloat3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-50px) scale(1.05)}}
+.bg-noise{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.015;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:rgba(255,51,88,0.25);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:rgba(255,51,88,0.45)}
+::selection{background:rgba(255,51,88,0.25);color:#fff}
+.glass{
+  background:var(--glass-surface);
+  backdrop-filter:var(--glass-blur);
+  -webkit-backdrop-filter:var(--glass-blur);
+  border:1px solid var(--glass-border);
+  border-radius:var(--glass-radius);
+  box-shadow:var(--glass-inner-glow),var(--glass-shadow);
+  position:relative;
+  overflow:hidden;
+}
+/* Light reflection layer on glass */
+.glass::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:50%;
+  background:linear-gradient(180deg,rgba(255,255,255,0.04),transparent);
+  border-radius:var(--glass-radius) var(--glass-radius) 0 0;
+  pointer-events:none;z-index:0;
+}
+.glass>*{position:relative;z-index:1}
+#particles{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.particle{position:absolute;border-radius:50%;background:var(--crimson);opacity:0;animation:floatUp linear infinite}
+@keyframes floatUp{0%{transform:translateY(100vh) translateX(0);opacity:0}10%{opacity:0.3}90%{opacity:0.2}100%{transform:translateY(-10vh) translateX(30px);opacity:0}}
+.cursor-glow{
+  position:fixed;width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,51,88,0.04) 0%,rgba(255,176,32,0.02) 30%,transparent 70%);
+  pointer-events:none;z-index:1;transform:translate(-50%,-50%);
+  transition:opacity .3s ease;mix-blend-mode:screen;
+  filter:blur(20px);
+}
+/* Slow light sweep on glass surfaces */
+@keyframes lightSweep{
+  0%{transform:translateX(-100%) rotate(25deg)}
+  100%{transform:translateX(200%) rotate(25deg)}
+}
+.glass-sweep{position:absolute;top:0;left:0;width:40%;height:100%;overflow:hidden;pointer-events:none;z-index:1;border-radius:inherit}
+.glass-sweep::before{
+  content:'';position:absolute;top:-50%;left:0;width:100%;height:200%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.03),transparent);
+  animation:lightSweep 8s ease-in-out infinite;
+}
+nav{
+  position:fixed;top:12px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 32px);max-width:1100px;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 24px;
+  background:rgba(255,255,255,0.04);
+  backdrop-filter:blur(24px) saturate(180%);
+  -webkit-backdrop-filter:blur(24px) saturate(180%);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:20px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.06),0 8px 32px rgba(0,0,0,0.2);
+  transition:all .35s cubic-bezier(0.4,0,0.2,1);
+}
+nav.scrolled{
+  padding:8px 20px;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(32px) saturate(200%);
+  -webkit-backdrop-filter:blur(32px) saturate(200%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.08),0 4px 24px rgba(0,0,0,0.25);
+}
+/* Light reflection on navbar */
+nav::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent 20%,rgba(255,255,255,0.15) 50%,transparent 80%);
+  pointer-events:none;
+}
+.nav-logo{font-family:var(--font-mono);font-weight:700;font-size:18px;letter-spacing:0.5px;display:flex;align-items:center;gap:6px}
+.nav-logo .accent{color:var(--crimson)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-family:var(--font-mono);font-size:13px;font-weight:500;color:var(--text-dim);transition:color .2s ease;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--crimson);transition:width .25s ease;border-radius:2px}
+.nav-links a:hover{color:var(--text)}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-links a.active{color:var(--text)}
+.nav-cta{
+  font-family:var(--font-mono);font-size:13px;font-weight:600;
+  padding:8px 18px;border-radius:var(--glass-radius-xs);
+  background:linear-gradient(135deg,rgba(255,51,88,0.9),rgba(255,107,138,0.8));
+  color:#fff;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 4px 16px rgba(255,51,88,0.2);
+  transition:all .2s cubic-bezier(0.4,0,0.2,1);
+}
+.nav-cta:hover{transform:translateY(-1px) scale(1.05);box-shadow:inset 0 1px 0 rgba(255,255,255,0.25),0 6px 20px rgba(255,51,88,0.35)}
+.nav-cta:active{transform:translateY(0) scale(0.98);transition:transform .1s}
+.menu-toggle{display:none;flex-direction:column;gap:5px;padding:4px}
+.menu-toggle span{width:24px;height:2px;background:var(--text);border-radius:2px;transition:all .25s ease}
+.menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle.open span:nth-child(2){opacity:0}
+.menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:860px){
+  .nav-links{position:fixed;top:60px;left:16px;right:16px;flex-direction:column;gap:0;background:rgba(15,13,24,0.9);backdrop-filter:blur(32px) saturate(180%);-webkit-backdrop-filter:blur(32px) saturate(180%);padding:0;max-height:0;overflow:hidden;transition:max-height .35s ease;border:1px solid rgba(255,255,255,0.08);border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,0.3)}
+  .nav-links.open{max-height:500px;padding:10px 0}
+  .nav-links a{padding:14px 5vw;width:100%;border-bottom:1px solid var(--border)}
+  .nav-links a::after{display:none}
+  .nav-cta{display:none}
+  .menu-toggle{display:flex}
+}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 5vw;position:relative;z-index:2}
+section{padding:100px 0;position:relative;z-index:2}
+.section-head{text-align:center;margin-bottom:60px}
+.section-tag{font-family:var(--font-mono);font-size:12px;font-weight:600;color:var(--crimson);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;display:inline-flex;align-items:center;gap:8px}
+.section-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--crimson)}
+.section-title{font-size:clamp(28px,5vw,46px);font-weight:700;letter-spacing:-1px;line-height:1.1}
+.section-title .accent{color:var(--crimson)}
+.section-sub{color:var(--text-dim);margin-top:12px;font-size:16px;max-width:500px;margin-left:auto;margin-right:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-mono);font-size:14px;font-weight:600;padding:14px 28px;border-radius:var(--radius-sm);transition:all .2s ease;cursor:pointer;white-space:nowrap}
+.btn-primary{
+  background:linear-gradient(135deg,rgba(255,51,88,0.9),rgba(255,107,138,0.8));
+  color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 4px 20px rgba(255,51,88,0.25);
+  position:relative;overflow:hidden;
+}
+.btn-primary::after{
+  content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);
+  transition:left .5s ease;
+}
+.btn-primary:hover{transform:translateY(-2px) scale(1.02);box-shadow:inset 0 1px 0 rgba(255,255,255,0.25),0 8px 28px rgba(255,51,88,0.35)}
+.btn-primary:hover::after{left:120%}
+.btn-primary:active{transform:translateY(0) scale(0.98);transition:transform .1s}
+.btn-ghost{
+  background:rgba(255,255,255,0.04);
+  backdrop-filter:blur(12px) saturate(150%);
+  -webkit-backdrop-filter:blur(12px) saturate(150%);
+  color:var(--text);border:1px solid rgba(255,255,255,0.1);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.05);
+  position:relative;overflow:hidden;
+}
+.btn-ghost:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.2);transform:translateY(-2px) scale(1.02);box-shadow:inset 0 1px 0 rgba(255,255,255,0.1),0 4px 20px rgba(0,0,0,0.2)}
+.btn-ghost:active{transform:translateY(0) scale(0.98);transition:transform .1s}
+.btn-amber{
+  background:linear-gradient(135deg,rgba(255,176,32,0.9),rgba(255,209,102,0.8));
+  color:#1a1000;box-shadow:inset 0 1px 0 rgba(255,255,255,0.3),0 4px 20px rgba(255,176,32,0.2);
+  position:relative;overflow:hidden;
+}
+.btn-amber:hover{transform:translateY(-2px) scale(1.02);box-shadow:inset 0 1px 0 rgba(255,255,255,0.35),0 8px 28px rgba(255,176,32,0.35)}
+.btn-amber:active{transform:translateY(0) scale(0.98);transition:transform .1s}
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px 5vw 60px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%;max-width:var(--max-w);margin:0 auto}
+.hero-content{z-index:2}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:24px;
+  background:rgba(255,51,88,0.06);
+  backdrop-filter:blur(12px) saturate(150%);
+  -webkit-backdrop-filter:blur(12px) saturate(150%);
+  border:1px solid rgba(255,51,88,0.15);
+  font-family:var(--font-mono);font-size:12px;color:var(--rose);
+  margin-bottom:24px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.04);
+}
+.hero-badge::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--crimson);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(255,51,88,0.4)}50%{opacity:0.7;box-shadow:0 0 0 6px rgba(255,51,88,0)}}
+.hero h1{font-size:clamp(36px,7vw,64px);font-weight:800;letter-spacing:-2px;line-height:1.05;margin-bottom:16px}
+.hero h1 .wave{display:inline-block;animation:wave 2.5s ease infinite;transform-origin:70% 70%}
+@keyframes wave{0%,100%{transform:rotate(0deg)}10%{transform:rotate(14deg)}20%{transform:rotate(-8deg)}30%{transform:rotate(14deg)}40%{transform:rotate(-4deg)}50%{transform:rotate(10deg)}60%{transform:rotate(0deg)}}
+.hero-subtitle{font-family:var(--font-mono);font-size:clamp(14px,2vw,18px);color:var(--text-dim);margin-bottom:16px;letter-spacing:0.5px}
+.hero-subtitle .accent{color:var(--crimson)}
+.hero-subtitle .amber-accent{color:var(--amber)}
+.hero-desc{color:var(--text-dim);font-size:16px;max-width:480px;margin-bottom:32px;line-height:1.7}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.hero-char{position:relative;display:flex;align-items:center;justify-content:center}
+.hero-char-img{
+  max-width:100%;max-height:480px;
+  border-radius:16px;z-index:2;
+  animation:charFloat 7s ease-in-out infinite;
+  box-shadow:0 8px 40px rgba(0,0,0,0.4),0 0 0 1px rgba(255,255,255,0.05),inset 0 1px 0 rgba(255,255,255,0.1);
+}
+@keyframes charFloat{0%,100%{transform:translateY(0) rotate(0deg)}33%{transform:translateY(-12px) rotate(-0.5deg)}66%{transform:translateY(6px) rotate(0.5deg)}}
+.hero-char-glow{position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(255,51,88,0.08) 0%,rgba(255,176,32,0.04) 40%,transparent 70%);animation:glowBreathe 5s ease-in-out infinite;z-index:0}
+@keyframes glowBreathe{0%,100%{transform:scale(1);opacity:0.4}50%{transform:scale(1.15);opacity:0.6}}
+.hero-char-frame{position:relative;display:flex;align-items:center;justify-content:center;padding:16px}
+.hero-char-frame::before{content:'';position:absolute;inset:0;border-radius:24px;background:linear-gradient(135deg,rgba(255,51,88,0.04),rgba(45,212,191,0.02));backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border:1px solid rgba(255,255,255,0.06);z-index:0;box-shadow:inset 0 1px 0 rgba(255,255,255,0.05)}
+.hero-char-frame::after{content:'';position:absolute;top:0;left:0;right:0;height:50%;border-radius:24px 24px 0 0;background:linear-gradient(180deg,rgba(255,255,255,0.03),transparent);pointer-events:none;z-index:1}
+.hero-char-particles{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden;border-radius:16px}
+.hero-char-particles span{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--crimson);opacity:0;animation:charParticle 4s ease-in-out infinite}
+.hero-char-particles span:nth-child(1){left:20%;animation-delay:0s;background:var(--crimson)}
+.hero-char-particles span:nth-child(2){left:50%;animation-delay:1s;background:var(--amber)}
+.hero-char-particles span:nth-child(3){left:80%;animation-delay:2s;background:var(--teal)}
+.hero-char-particles span:nth-child(4){left:35%;animation-delay:1.5s;background:var(--rose)}
+.hero-char-particles span:nth-child(5){left:65%;animation-delay:0.5s;background:var(--crimson)}
+@keyframes charParticle{0%{transform:translateY(0) scale(0);opacity:0}20%{opacity:0.6;transform:scale(1)}80%{opacity:0.3}100%{transform:translateY(-80px) scale(0);opacity:0}}
+@media(prefers-reduced-motion:reduce){.hero-char-img{animation:none}.hero-char-glow{animation:none}.hero-char-particles span{display:none}}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:30px;text-align:center}.hero-char{order:-1}.hero-char-img{max-height:350px}.hero-content{max-width:500px;margin:0 auto}.hero-btns{justify-content:center}.hero-desc{margin-left:auto;margin-right:auto}}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.about-card{
+  padding:32px;border-radius:var(--glass-radius);
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(20px) saturate(170%);
+  -webkit-backdrop-filter:blur(20px) saturate(170%);
+  border:1px solid rgba(255,255,255,0.06);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.05),0 8px 32px rgba(0,0,0,0.2);
+  position:relative;overflow:hidden;
+}
+.about-card::before{content:'';position:absolute;top:0;left:0;right:0;height:30%;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);pointer-events:none}
+.about-card h3{font-size:20px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.about-card p{color:var(--text-dim);line-height:1.8;margin-bottom:12px}
+.about-card .highlight{color:var(--rose);font-weight:600}
+.about-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.about-tag{
+  padding:5px 14px;border-radius:20px;font-size:12px;font-family:var(--font-mono);
+  background:rgba(255,51,88,0.06);color:var(--rose);
+  border:1px solid rgba(255,51,88,0.12);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+.about-tag.amber{background:var(--amber-dim);color:var(--amber);border-color:rgba(255,176,32,0.2)}
+.about-tag.teal{background:var(--teal-dim);color:var(--teal);border-color:rgba(45,212,191,0.2)}
+.timeline{position:relative;padding-left:32px}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--crimson),var(--amber),transparent)}
+.timeline-item{position:relative;padding-bottom:24px}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-item::before{content:'';position:absolute;left:-28px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--crimson);border:2px solid var(--bg);box-shadow:0 0 0 2px var(--crimson)}
+.timeline-item:nth-child(2)::before{background:var(--amber);box-shadow:0 0 0 2px var(--amber)}
+.timeline-item:nth-child(3)::before{background:var(--teal);box-shadow:0 0 0 2px var(--teal)}
+.timeline-item:nth-child(4)::before{background:var(--rose);box-shadow:0 0 0 2px var(--rose)}
+.timeline-item:nth-child(5)::before{background:var(--gold);box-shadow:0 0 0 2px var(--gold)}
+.timeline-item:nth-child(6)::before{background:transparent;border:2px dashed var(--text-mute);box-shadow:none}
+.timeline-label{font-family:var(--font-mono);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--amber);margin-bottom:4px}
+.timeline-text{color:var(--text-dim);font-size:14px}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:24px}}
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.cards-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.cards-grid{grid-template-columns:1fr}}
+.service-card{
+  padding:28px;
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(16px) saturate(160%);
+  -webkit-backdrop-filter:blur(16px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:var(--glass-radius);
+  transition:all .3s cubic-bezier(0.4,0,0.2,1);
+  cursor:pointer;position:relative;overflow:hidden;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.04),0 4px 24px rgba(0,0,0,0.15);
+}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,51,88,0.4),rgba(255,176,32,0.4),transparent);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+.service-card:hover{transform:translateY(-6px) scale(1.02);background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.12);box-shadow:inset 0 1px 0 rgba(255,255,255,0.08),0 16px 48px rgba(0,0,0,0.3)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-icon{font-size:32px;margin-bottom:16px;display:block}
+.service-card h3{font-size:17px;font-weight:700;margin-bottom:8px}
+.service-card p{color:var(--text-dim);font-size:14px;line-height:1.6}
+.filter-bar{display:flex;gap:8px;justify-content:center;margin-bottom:32px;flex-wrap:wrap}
+.filter-btn{
+  padding:8px 18px;border-radius:20px;font-family:var(--font-mono);font-size:12px;font-weight:600;
+  color:var(--text-dim);
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(10px) saturate(140%);
+  -webkit-backdrop-filter:blur(10px) saturate(140%);
+  border:1px solid rgba(255,255,255,0.06);cursor:pointer;
+  transition:all .25s cubic-bezier(0.4,0,0.2,1);
+}
+.filter-btn:hover{background:rgba(255,255,255,0.06);color:var(--text);border-color:rgba(255,255,255,0.1)}
+.filter-btn.active{background:linear-gradient(135deg,rgba(255,51,88,0.9),rgba(255,107,138,0.8));color:#fff;border-color:rgba(255,51,88,0.3);box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 4px 16px rgba(255,51,88,0.2)}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.projects-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.projects-grid{grid-template-columns:1fr}}
+.project-card{
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(16px) saturate(160%);
+  -webkit-backdrop-filter:blur(16px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:var(--glass-radius);overflow:hidden;
+  transition:all .3s cubic-bezier(0.4,0,0.2,1);
+  cursor:pointer;position:relative;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.04),0 4px 24px rgba(0,0,0,0.15);
+}
+.project-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:40%;
+  background:linear-gradient(180deg,rgba(255,255,255,0.03),transparent);
+  pointer-events:none;z-index:0;border-radius:var(--glass-radius) var(--glass-radius) 0 0;
+}
+.project-card>*{position:relative;z-index:1}
+.project-card:hover{
+  transform:translateY(-6px) scale(1.02);
+  background:rgba(255,255,255,0.05);
+  border-color:rgba(255,255,255,0.12);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.08),0 16px 48px rgba(0,0,0,0.3);
+}
+.project-thumb{
+  height:180px;background:rgba(255,255,255,0.02);
+  display:flex;align-items:center;justify-content:center;
+  font-size:48px;position:relative;overflow:hidden;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+}
+.project-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,51,88,0.06),rgba(45,212,191,0.03) 60%,transparent);pointer-events:none}
+.project-thumb::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,0.03),transparent 50%);pointer-events:none}
+.project-info{padding:20px}
+.project-name{font-size:17px;font-weight:700;margin-bottom:6px}
+.project-desc{color:var(--text-dim);font-size:13px;line-height:1.5;margin-bottom:12px}
+.project-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.project-tag{
+  padding:3px 10px;border-radius:12px;font-size:11px;font-family:var(--font-mono);
+  background:rgba(255,51,88,0.08);color:var(--rose);
+  border:1px solid rgba(255,51,88,0.12);
+}
+.project-tag.amber{background:var(--amber-dim);color:var(--amber)}
+.project-tag.teal{background:var(--teal-dim);color:var(--teal)}
+.project-links{display:flex;gap:8px}
+.project-link{padding:6px 14px;border-radius:8px;font-size:12px;font-weight:600;font-family:var(--font-mono);display:inline-flex;align-items:center;gap:4px;transition:all .15s ease}
+.project-link.demo{
+  background:linear-gradient(135deg,rgba(255,51,88,0.9),rgba(255,107,138,0.8));
+  color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 2px 12px rgba(255,51,88,0.15);
+}
+.project-link.demo:hover{transform:translateY(-1px) scale(1.05);box-shadow:inset 0 1px 0 rgba(255,255,255,0.25),0 4px 16px rgba(255,51,88,0.25)}
+.project-link.code{
+  background:rgba(255,255,255,0.04);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,0.1);color:var(--text-dim);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.04);
+}
+.project-link.code:hover{color:var(--text);border-color:rgba(255,255,255,0.2);transform:translateY(-1px) scale(1.05)}
+.ai-lab{
+  background:linear-gradient(135deg,rgba(255,51,88,0.04),rgba(45,212,191,0.03));
+  backdrop-filter:blur(20px) saturate(160%);
+  -webkit-backdrop-filter:blur(20px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:var(--glass-radius);padding:60px 40px;
+  position:relative;overflow:hidden;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.05),0 8px 32px rgba(0,0,0,0.2);
+}
+.ai-core{width:120px;height:120px;margin:0 auto 40px;position:relative;display:flex;align-items:center;justify-content:center}
+.ai-core-ring{position:absolute;border-radius:50%;border:2px solid;animation:ai-spin 8s linear infinite}
+.ai-core-ring:nth-child(1){width:120px;height:120px;border-color:var(--crimson);opacity:0.3}
+.ai-core-ring:nth-child(2){width:90px;height:90px;border-color:var(--amber);opacity:0.4;animation-duration:6s;animation-direction:reverse}
+.ai-core-ring:nth-child(3){width:60px;height:60px;border-color:var(--teal);opacity:0.5;animation-duration:4s}
+.ai-core-center{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle,var(--crimson),var(--amber));animation:ai-pulse 2s ease infinite;z-index:2}
+@keyframes ai-spin{to{transform:rotate(360deg)}}
+@keyframes ai-pulse{0%,100%{transform:scale(1);box-shadow:0 0 20px rgba(255,51,88,0.4)}50%{transform:scale(1.2);box-shadow:0 0 30px rgba(255,176,32,0.5)}}
+.ai-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:800px;margin:0 auto}
+@media(max-width:768px){.ai-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.ai-grid{grid-template-columns:1fr}}
+.ai-item{
+  padding:20px;border-radius:var(--glass-radius-sm);text-align:center;
+  background:rgba(255,255,255,0.025);
+  backdrop-filter:blur(10px) saturate(150%);
+  -webkit-backdrop-filter:blur(10px) saturate(150%);
+  border:1px solid rgba(255,255,255,0.05);
+  transition:all .25s cubic-bezier(0.4,0,0.2,1);
+}
+.ai-item:hover{transform:translateY(-4px) scale(1.03);background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1)}
+.ai-item-icon{font-size:28px;margin-bottom:8px}
+.ai-item h4{font-size:14px;font-weight:600;margin-bottom:4px}
+.ai-item p{font-size:12px;color:var(--text-mute)}
+.tech-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:768px){.tech-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:400px){.tech-grid{grid-template-columns:1fr}}
+.tech-badge{
+  padding:24px 16px;border-radius:var(--glass-radius-sm);text-align:center;
+  background:rgba(255,255,255,0.025);
+  backdrop-filter:blur(12px) saturate(150%);
+  -webkit-backdrop-filter:blur(12px) saturate(150%);
+  border:1px solid rgba(255,255,255,0.06);
+  transition:all .25s cubic-bezier(0.4,0,0.2,1);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);
+}
+.tech-badge:hover{transform:translateY(-4px) scale(1.03);background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.12);box-shadow:inset 0 1px 0 rgba(255,255,255,0.08),0 8px 24px rgba(0,0,0,0.2)}
+.tech-badge .tech-icon{font-size:36px;margin-bottom:8px;display:block}
+.tech-badge .tech-name{font-family:var(--font-mono);font-size:13px;font-weight:600}
+.tech-badge .tech-desc{font-size:11px;color:var(--text-mute);margin-top:4px}
+.github-section{text-align:center}
+.github-card{
+  padding:40px;border-radius:var(--glass-radius);max-width:600px;margin:0 auto;
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(20px) saturate(170%);
+  -webkit-backdrop-filter:blur(20px) saturate(170%);
+  border:1px solid rgba(255,255,255,0.06);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.05),0 8px 32px rgba(0,0,0,0.2);
+}
+.github-stats{display:flex;justify-content:center;gap:40px;margin:24px 0}
+.github-stat{text-align:center}
+.github-stat .num{font-size:32px;font-weight:800;color:var(--crimson);font-family:var(--font-mono)}
+.github-stat .label{font-size:12px;color:var(--text-mute);text-transform:uppercase;letter-spacing:1px}
+.repo-list{display:grid;gap:12px;margin:24px 0}
+.repo-item{
+  display:flex;align-items:center;gap:12px;padding:14px 18px;
+  border-radius:var(--glass-radius-sm);
+  background:rgba(255,255,255,0.02);
+  backdrop-filter:blur(8px) saturate(140%);
+  -webkit-backdrop-filter:blur(8px) saturate(140%);
+  border:1px solid rgba(255,255,255,0.05);
+  transition:all .25s cubic-bezier(0.4,0,0.2,1);text-align:left;
+}
+.repo-item:hover{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.12);transform:translateX(4px)}
+.repo-icon{font-size:20px}
+.repo-name{font-family:var(--font-mono);font-weight:600;font-size:14px}
+.repo-meta{font-size:12px;color:var(--text-mute);margin-left:auto;white-space:nowrap}
+.currently-building{
+  padding:32px;border-radius:var(--glass-radius);max-width:600px;margin:0 auto;
+  background:rgba(255,51,88,0.04);
+  backdrop-filter:blur(20px) saturate(160%);
+  -webkit-backdrop-filter:blur(20px) saturate(160%);
+  border:1px solid rgba(255,51,88,0.15);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.04),0 8px 32px rgba(0,0,0,0.2);
+}
+.build-status{display:inline-flex;align-items:center;gap:8px;padding:4px 12px;border-radius:20px;font-family:var(--font-mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;background:rgba(255,176,32,0.15);color:var(--amber);border:1px solid rgba(255,176,32,0.3)}
+.build-status::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--amber);animation:pulse 1.5s ease infinite}
+.build-title{font-size:22px;font-weight:700;margin:16px 0 8px}
+.build-desc{color:var(--text-dim);font-size:14px;line-height:1.6}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:768px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+.stat-card{
+  padding:28px 16px;border-radius:var(--glass-radius);text-align:center;
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(16px) saturate(160%);
+  -webkit-backdrop-filter:blur(16px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.06);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.04),0 4px 24px rgba(0,0,0,0.15);
+}
+.stat-num{font-size:36px;font-weight:800;font-family:var(--font-mono);color:var(--crimson);margin-bottom:4px}
+.stat-label{font-size:12px;color:var(--text-mute);text-transform:uppercase;letter-spacing:1px}
+.contact{text-align:center;padding:120px 0}
+.contact h2{font-size:clamp(32px,6vw,52px);font-weight:800;letter-spacing:-1px;margin-bottom:16px}
+.contact h2 .accent{color:var(--crimson)}
+.contact p{color:var(--text-dim);max-width:500px;margin:0 auto 32px;font-size:16px}
+.contact-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
+.contact-link{
+  display:inline-flex;align-items:center;gap:8px;padding:12px 20px;
+  border-radius:var(--glass-radius-sm);
+  background:rgba(255,255,255,0.04);
+  backdrop-filter:blur(12px) saturate(150%);
+  -webkit-backdrop-filter:blur(12px) saturate(150%);
+  border:1px solid rgba(255,255,255,0.08);
+  font-family:var(--font-mono);font-size:13px;font-weight:500;
+  transition:all .25s cubic-bezier(0.4,0,0.2,1);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.04);
+}
+.contact-link:hover{transform:translateY(-3px) scale(1.03);background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);box-shadow:inset 0 1px 0 rgba(255,255,255,0.08),0 8px 24px rgba(0,0,0,0.2)}
+.contact-link svg{width:18px;height:18px;fill:currentColor}
+.reveal{opacity:0;transform:translateY(30px) scale(0.98);filter:blur(4px);transition:opacity .6s cubic-bezier(0.4,0,0.2,1),transform .6s cubic-bezier(0.4,0,0.2,1),filter .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+.tilt-card{transition:transform .15s ease;transform-style:preserve-3d}
+.creator-section{text-align:center}
+.creator-card{
+  padding:40px;border-radius:var(--glass-radius);max-width:600px;margin:0 auto;
+  background:linear-gradient(135deg,rgba(255,176,32,0.04),rgba(255,51,88,0.02));
+  backdrop-filter:blur(24px) saturate(170%);
+  -webkit-backdrop-filter:blur(24px) saturate(170%);
+  border:1px solid rgba(255,176,32,0.15);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.05),0 8px 32px rgba(0,0,0,0.2);
+  position:relative;overflow:hidden;
+}
+.creator-card::before{content:'';position:absolute;top:0;left:0;right:0;height:40%;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);pointer-events:none}
+.creator-name{font-size:28px;font-weight:800;letter-spacing:-0.5px;margin:16px 0 8px;color:var(--amber)}
+.creator-tag{font-family:var(--font-mono);font-size:13px;color:var(--text-dim);margin-bottom:16px}
+.creator-desc{color:var(--text-dim);font-size:14px;max-width:400px;margin:0 auto 24px;line-height:1.6}
+@media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms!important;transition-duration:0.01ms!important}.particle{display:none}.cursor-glow{display:none}.bg-orb{animation:none!important}.glass-sweep::before{animation:none!important;display:none}.reveal{filter:none!important;transform:translateY(20px)!important}}
+/* Touch devices — disable cursor-dependent effects */
+@media(hover:none) and (pointer:coarse){.cursor-glow{display:none}.tilt-card{transform:none!important}}
+/* Mobile performance — reduce expensive blur */
+@media(max-width:768px){
+  .glass,.project-card,.service-card,.about-card,.form-card{
+    backdrop-filter:blur(12px) saturate(140%);
+    -webkit-backdrop-filter:blur(12px) saturate(140%);
+  }
+  .bg-orb{filter:blur(60px);opacity:0.3}
+  .glass-sweep{display:none}
+}
+footer{text-align:center;padding:40px 5vw;border-top:1px solid var(--border);color:var(--text-mute);font-size:13px}
+footer .heart{color:var(--crimson)}
+.modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(5,4,10,0.8);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.show{display:flex}
+.modal{
+  max-width:600px;width:100%;
+  background:rgba(15,13,24,0.85);
+  backdrop-filter:blur(40px) saturate(180%);
+  -webkit-backdrop-filter:blur(40px) saturate(180%);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:var(--glass-radius);padding:32px;
+  max-height:85vh;overflow-y:auto;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.08),0 24px 80px rgba(0,0,0,0.5);
+}
+.modal-close{float:right;font-size:24px;color:var(--text-mute);cursor:pointer;transition:color .15s}
+.modal-close:hover{color:var(--text)}
+.modal h3{font-size:22px;font-weight:700;margin-bottom:16px}
+.modal-thumb{height:200px;border-radius:var(--radius-sm);background:var(--surface-2);display:flex;align-items:center;justify-content:center;font-size:48px;margin-bottom:16px}
+.modal-section{margin-bottom:16px}
+.modal-section h4{font-size:13px;font-weight:600;color:var(--amber);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.modal-section p{color:var(--text-dim);font-size:14px;line-height:1.6}
+.modal-tags{display:flex;flex-wrap:wrap;gap:6px}
+.modal-links{display:flex;gap:8px;margin-top:16px}
+
+.see-more-wrap{text-align:center;padding:20px 0}
+.see-more-btn{
+  font-family:var(--font-mono);font-size:14px;font-weight:600;padding:14px 32px;
+  border-radius:var(--glass-radius-sm);
+  background:rgba(255,51,88,0.06);
+  backdrop-filter:blur(12px) saturate(150%);
+  -webkit-backdrop-filter:blur(12px) saturate(150%);
+  color:var(--crimson);border:1px solid rgba(255,51,88,0.2);
+  cursor:pointer;transition:all .25s cubic-bezier(0.4,0,0.2,1);
+  display:inline-flex;align-items:center;gap:8px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.04);
+}
+.see-more-btn:hover{background:rgba(255,51,88,0.15);color:#fff;transform:translateY(-2px) scale(1.02);border-color:rgba(255,51,88,0.4);box-shadow:inset 0 1px 0 rgba(255,255,255,0.1),0 4px 16px rgba(255,51,88,0.2)}
+.see-more-btn .arrow{transition:transform .3s ease}
+.see-more-btn.expanded .arrow{transform:rotate(180deg)}
+.project-card.extra{display:none}
+.project-card.extra.show{display:block;animation:fadeUp .4s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+
+/* ===== FREELANCE SYSTEM ===== */
+.avail-badge{
+  display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:24px;
+  background:rgba(16,185,129,.06);
+  backdrop-filter:blur(12px) saturate(150%);
+  -webkit-backdrop-filter:blur(12px) saturate(150%);
+  border:1px solid rgba(16,185,129,.2);
+  font-family:var(--font-mono);font-size:12px;font-weight:600;color:#34d399;
+  margin-bottom:8px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.04),0 4px 16px rgba(16,185,129,0.08);
+}
+.avail-badge::before{content:'';width:8px;height:8px;border-radius:50%;background:#10b981;box-shadow:0 0 0 0 rgba(16,185,129,.5);animation:availPulse 2s ease infinite}
+@keyframes availPulse{0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,.5)}50%{box-shadow:0 0 0 8px rgba(16,185,129,0)}}
+.avail-sub{font-size:13px;color:var(--text-dim);margin-bottom:20px;font-family:var(--font-mono)}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.services-grid{grid-template-columns:1fr}}
+.service-card-f{
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(20px) saturate(170%);
+  -webkit-backdrop-filter:blur(20px) saturate(170%);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:var(--glass-radius);padding:28px 24px;
+  transition:all .3s cubic-bezier(0.4,0,0.2,1);
+  position:relative;overflow:hidden;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.04),0 4px 24px rgba(0,0,0,0.15);
+}
+.service-card-f::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,51,88,0.5),transparent);opacity:0;transition:opacity .3s ease}
+.service-card-f::after{content:'';position:absolute;top:0;left:0;right:0;height:40%;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);pointer-events:none}
+.service-card-f:hover{transform:translateY(-6px) scale(1.02);background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.12);box-shadow:inset 0 1px 0 rgba(255,255,255,0.08),0 16px 48px rgba(0,0,0,0.3)}
+.service-card-f:hover::before{opacity:1}
+.service-icon-f{font-size:2rem;margin-bottom:14px;display:block}
+.service-card-f h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.service-card-f p{font-size:0.85rem;color:var(--text-dim);line-height:1.6}
+
+/* Why Work With Me */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.why-grid{grid-template-columns:1fr}}
+.why-card{
+  background:rgba(255,255,255,0.025);
+  backdrop-filter:blur(12px) saturate(150%);
+  -webkit-backdrop-filter:blur(12px) saturate(150%);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:var(--glass-radius-sm);padding:20px;
+  display:flex;align-items:flex-start;gap:12px;
+  transition:all .25s cubic-bezier(0.4,0,0.2,1);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);
+}
+.why-card:hover{transform:translateY(-3px);background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);box-shadow:inset 0 1px 0 rgba(255,255,255,0.06),0 8px 24px rgba(0,0,0,0.2)}
+.why-card .w-icon{width:38px;height:38px;border-radius:10px;background:var(--crimson-dim);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.why-card h4{font-size:0.9rem;font-weight:600;margin-bottom:3px}
+.why-card p{font-size:0.78rem;color:var(--text-dim)}
+
+/* How I Work Timeline */
+.timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;position:relative}
+@media(max-width:900px){.timeline{grid-template-columns:repeat(3,1fr);gap:16px}}
+@media(max-width:600px){.timeline{grid-template-columns:1fr}}
+.tl-step{
+  background:rgba(255,255,255,0.025);
+  backdrop-filter:blur(12px) saturate(150%);
+  -webkit-backdrop-filter:blur(12px) saturate(150%);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:var(--glass-radius);padding:20px 16px;
+  text-align:center;position:relative;
+  transition:all .25s cubic-bezier(0.4,0,0.2,1);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.03);
+}
+.tl-step:hover{transform:translateY(-4px) scale(1.03);border-color:rgba(255,51,88,0.3);background:rgba(255,255,255,0.05);box-shadow:inset 0 1px 0 rgba(255,255,255,0.06),0 8px 24px rgba(0,0,0,0.2)}
+.tl-num{width:32px;height:32px;border-radius:50%;background:var(--crimson);color:#fff;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+.tl-step h4{font-size:0.82rem;font-weight:600;margin-bottom:4px}
+.tl-step p{font-size:0.72rem;color:var(--text-dim)}
+
+/* Contact Section Premium */
+.contact-premium{padding:100px 0}
+.contact-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:36px}
+@media(max-width:768px){.contact-cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.contact-cards{grid-template-columns:1fr}}
+.contact-card{
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(16px) saturate(160%);
+  -webkit-backdrop-filter:blur(16px) saturate(160%);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:var(--glass-radius-sm);padding:20px;
+  text-align:center;
+  transition:all .25s cubic-bezier(0.4,0,0.2,1);
+  display:block;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.04);
+}
+.contact-card:hover{transform:translateY(-4px) scale(1.03);background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.12);box-shadow:inset 0 1px 0 rgba(255,255,255,0.08),0 8px 24px rgba(0,0,0,0.2)}
+.contact-card .cc-icon{font-size:1.6rem;margin-bottom:8px;display:block}
+.contact-card .cc-label{font-size:0.7rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.contact-card .cc-value{font-size:0.82rem;font-weight:600;color:var(--text);word-break:break-all}
+
+/* Contact Form */
+.form-card{
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(24px) saturate(170%);
+  -webkit-backdrop-filter:blur(24px) saturate(170%);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:var(--glass-radius);padding:32px;
+  max-width:640px;margin:0 auto;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.06),0 8px 32px rgba(0,0,0,0.2);
+}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.form-row-2{grid-template-columns:1fr}}
+.form-field{margin-bottom:16px}
+.form-field label{display:block;font-size:0.72rem;font-weight:600;color:var(--text-dim);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.form-field input,.form-field select,.form-field textarea{
+  width:100%;padding:11px 14px;
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:var(--glass-radius-xs);
+  color:var(--text);font-size:0.875rem;font-family:var(--font-body);
+  transition:all .2s ease;
+}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{
+  border-color:rgba(255,51,88,0.4);
+  background:rgba(255,255,255,0.04);
+  outline:none;box-shadow:0 0 0 3px rgba(255,51,88,0.08);
+}
+.form-field textarea{resize:vertical;min-height:100px}
+.form-field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a89fb8' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:16px;padding-right:36px;cursor:pointer}
+.form-success{display:none;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.3);border-radius:var(--radius-sm);padding:14px 18px;color:#34d399;font-size:0.85rem;margin-top:16px}
+.form-success.show{display:block;animation:fadeIn .3s ease}
+.email-cta{text-align:center;margin-top:24px}
+.email-cta p{color:var(--text-dim);font-size:0.85rem;margin-bottom:8px}
+
+/* Project Inquiry CTA */
+.inquiry-cta{
+  text-align:center;padding:60px 20px;
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(20px) saturate(170%);
+  -webkit-backdrop-filter:blur(20px) saturate(170%);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:var(--glass-radius);
+  margin:0 auto;max-width:640px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.05),0 8px 32px rgba(0,0,0,0.2);
+}
+.inquiry-cta h3{font-size:1.3rem;font-weight:700;margin-bottom:8px}
+.inquiry-cta p{color:var(--text-dim);font-size:0.9rem;margin-bottom:20px}
+
+/* Footer Premium */
+.footer-premium{
+  background:rgba(255,255,255,0.015);
+  backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);
+  border-top:1px solid rgba(255,255,255,0.06);
+  padding:48px 5vw 24px;
+}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px;max-width:var(--max-w);margin:0 auto}
+@media(max-width:600px){.footer-grid{grid-template-columns:1fr;text-align:center}}
+.footer-brand h3{font-size:1.1rem;font-weight:800;margin-bottom:4px}
+.footer-brand .tag{color:var(--text-dim);font-size:0.85rem;margin-bottom:6px}
+.footer-brand .avail{color:#34d399;font-size:0.8rem;font-weight:600;font-family:var(--font-mono)}
+.footer-links h4{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:10px}
+.footer-links a{display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;transition:color .2s ease}
+.footer-links a:hover{color:var(--crimson)}
+.footer-bottom{text-align:center;padding-top:24px;margin-top:24px;border-top:1px solid var(--border);color:var(--text3);font-size:0.78rem}
+
+
+/* ===== HERO PARALLAX ===== */
+.hero-parallax{transition:transform .1s ease-out;will-change:transform}
+.bg-orb{transition:transform .15s ease-out;will-change:transform}
+
+/* ===== ACCESSIBILITY ===== */
+*:focus-visible{outline:2px solid var(--crimson);outline-offset:3px;border-radius:4px}
+.btn:focus-visible,.nav-cta:focus-visible,.filter-btn:focus-visible,.project-link:focus-visible{outline:2px solid var(--crimson);outline-offset:2px}
+.skip-link{position:absolute;top:-40px;left:0;background:var(--crimson);color:#fff;padding:8px 16px;z-index:9999;border-radius:0 0 8px 0;font-size:0.85rem}
+.skip-link:focus{top:0}
+
+/* ===== MY JOURNEY TIMELINE ===== */
+.journey-section{padding:100px 0}
+.journey-wrap{max-width:700px;margin:0 auto;position:relative;padding-left:40px}
+.journey-wrap::before{content:'';position:absolute;left:12px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--crimson),var(--amber),var(--teal),var(--primary),transparent)}
+.journey-item{position:relative;padding-bottom:40px;opacity:0;transform:translateX(-20px);transition:opacity .5s ease,transform .5s ease}
+.journey-item.visible{opacity:1;transform:translateX(0)}
+.journey-item:last-child{padding-bottom:0}
+.journey-dot{position:absolute;left:-34px;top:0;width:20px;height:20px;border-radius:50%;background:var(--crimson);border:3px solid var(--bg);box-shadow:0 0 0 3px var(--crimson);transition:all .3s ease}
+.journey-item:nth-child(2) .journey-dot{background:var(--amber);box-shadow:0 0 0 3px var(--amber)}
+.journey-item:nth-child(3) .journey-dot{background:var(--teal);box-shadow:0 0 0 3px var(--teal)}
+.journey-item:nth-child(4) .journey-dot{background:var(--primary);box-shadow:0 0 0 3px var(--primary)}
+.journey-item:nth-child(5) .journey-dot{background:var(--rose);box-shadow:0 0 0 3px var(--rose)}
+.journey-item:nth-child(6) .journey-dot{background:var(--gold);box-shadow:0 0 0 3px var(--gold)}
+.journey-label{font-family:var(--font-mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--crimson);margin-bottom:4px}
+.journey-item:nth-child(2) .journey-label{color:var(--amber)}
+.journey-item:nth-child(3) .journey-label{color:var(--teal)}
+.journey-item:nth-child(4) .journey-label{color:var(--primary)}
+.journey-item:nth-child(5) .journey-label{color:var(--rose)}
+.journey-item:nth-child(6) .journey-label{color:var(--gold)}
+.journey-title{font-size:1.1rem;font-weight:700;margin-bottom:6px}
+.journey-desc{color:var(--text-dim);font-size:0.875rem;line-height:1.7}
+
+/* ===== BROWSER PREVIEW ===== */
+.browser-preview{background:rgba(255,255,255,0.03);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;margin-top:16px;transition:all .3s ease}
+.browser-preview:hover{border-color:rgba(255,255,255,0.15);box-shadow:0 8px 32px rgba(0,0,0,0.3)}
+.browser-header{display:flex;align-items:center;gap:6px;padding:10px 14px;background:rgba(255,255,255,0.03);border-bottom:1px solid rgba(255,255,255,0.06)}
+.browser-dot{width:10px;height:10px;border-radius:50%}
+.browser-dot:nth-child(1){background:#ff5f56}
+.browser-dot:nth-child(2){background:#ffbd2e}
+.browser-dot:nth-child(3){background:#27c93f}
+.browser-url{flex:1;margin-left:10px;padding:4px 12px;background:rgba(255,255,255,0.04);border-radius:6px;font-family:var(--font-mono);font-size:0.72rem;color:var(--text3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.browser-body{height:120px;display:flex;align-items:center;justify-content:center;font-size:2rem;position:relative;overflow:hidden}
+.browser-body::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,51,88,0.04),transparent 60%);pointer-events:none}
+.browser-open{position:absolute;inset:0;background:rgba(8,7,13,0.8);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s ease}
+.browser-preview:hover .browser-open{opacity:1}
+.browser-open a{padding:8px 20px;border-radius:8px;background:var(--crimson);color:#fff;font-family:var(--font-mono);font-size:0.78rem;font-weight:600;white-space:nowrap}
+
+/* ===== CASE STUDY MODAL ENHANCEMENT ===== */
+.modal-case{margin-bottom:18px}
+.modal-case h4{font-size:0.72rem;font-weight:700;color:var(--crimson);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.modal-case p{color:var(--text-dim);font-size:0.875rem;line-height:1.7}
+.modal-case ul{padding-left:20px;margin-top:6px}
+.modal-case ul li{color:var(--text-dim);font-size:0.82rem;margin-bottom:3px}
+
+/* ===== SERVICE CTA ===== */
+.service-cta{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-family:var(--font-mono);font-size:0.78rem;font-weight:600;color:var(--crimson);transition:gap .2s ease}
+.service-cta:hover{gap:10px}
+
+
+/* ===== BIG COMPLETE PROJECTS ===== */
+.big-projects-section{padding:100px 0;position:relative}
+.big-projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px}
+@media(max-width:768px){.big-projects-grid{grid-template-columns:1fr}}
+.big-project-card{
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(20px) saturate(170%);
+  -webkit-backdrop-filter:blur(20px) saturate(170%);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:24px;overflow:hidden;
+  transition:all .35s cubic-bezier(0.4,0,0.2,1);
+  position:relative;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.06),0 8px 32px rgba(0,0,0,0.2);
+}
+.big-project-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:50%;
+  background:linear-gradient(180deg,rgba(255,255,255,0.03),transparent);
+  pointer-events:none;z-index:0;
+}
+.big-project-card:hover{
+  transform:translateY(-8px) scale(1.01);
+  border-color:rgba(255,255,255,0.15);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.1),0 24px 64px rgba(0,0,0,0.35);
+}
+.big-project-header{
+  padding:28px 28px 0;position:relative;z-index:1;
+  display:flex;align-items:flex-start;gap:16px;
+}
+.big-project-icon{
+  width:56px;height:56px;border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;flex-shrink:0;
+}
+.big-project-icon.chat{background:linear-gradient(135deg,rgba(255,51,88,0.15),rgba(255,107,138,0.1));border:1px solid rgba(255,51,88,0.2)}
+.big-project-icon.ai{background:linear-gradient(135deg,rgba(78,204,163,0.15),rgba(45,212,191,0.1));border:1px solid rgba(78,204,163,0.2)}
+.big-project-header h3{font-size:1.25rem;font-weight:800;margin-bottom:4px}
+.big-project-header .bp-badge{
+  display:inline-block;font-size:0.65rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:1px;padding:3px 10px;border-radius:6px;margin-top:4px;
+}
+.big-project-header .bp-badge.live{background:rgba(16,185,129,0.1);color:#34d399;border:1px solid rgba(16,185,129,0.2)}
+.big-project-header .bp-badge.featured{background:rgba(255,176,32,0.1);color:var(--amber);border:1px solid rgba(255,176,32,0.2)}
+.big-project-body{padding:0 28px 28px;position:relative;z-index:1}
+.big-project-body p{color:var(--text-dim);font-size:0.875rem;line-height:1.7;margin:16px 0}
+.big-project-features{
+  display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:16px 0;
+}
+@media(max-width:480px){.big-project-features{grid-template-columns:1fr}}
+.big-project-features .f-item{
+  font-size:0.75rem;color:var(--text-dim);
+  display:flex;align-items:center;gap:6px;
+}
+.big-project-features .f-item::before{content:'✓';color:var(--success);font-weight:700}
+.big-project-tech{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0}
+.big-project-tech .bp-tag{
+  padding:4px 12px;border-radius:8px;font-size:0.72rem;font-weight:600;
+  font-family:var(--font-mono);background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.06);color:var(--text-dim);
+}
+.big-project-tech .bp-tag.accent{background:rgba(255,51,88,0.08);color:var(--rose);border-color:rgba(255,51,88,0.12)}
+.big-project-tech .bp-tag.teal{background:rgba(45,212,191,0.08);color:var(--teal);border-color:rgba(45,212,191,0.12)}
+.big-project-tech .bp-tag.amber{background:rgba(255,176,32,0.08);color:var(--amber);border-color:rgba(255,176,32,0.12)}
+.big-project-links{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.big-project-links .bp-btn{
+  padding:10px 22px;border-radius:12px;font-size:0.82rem;font-weight:600;
+  display:inline-flex;align-items:center;gap:6px;transition:all .2s ease;
+}
+.big-project-links .bp-btn.primary{
+  background:linear-gradient(135deg,rgba(255,51,88,0.9),rgba(255,107,138,0.8));
+  color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 4px 16px rgba(255,51,88,0.2);
+}
+.big-project-links .bp-btn.primary:hover{transform:translateY(-2px) scale(1.02);box-shadow:inset 0 1px 0 rgba(255,255,255,0.25),0 8px 24px rgba(255,51,88,0.3)}
+.big-project-links .bp-btn.primary.teal-grad{background:linear-gradient(135deg,rgba(78,204,163,0.9),rgba(45,212,191,0.8));box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 4px 16px rgba(78,204,163,0.2)}
+.big-project-links .bp-btn.primary.teal-grad:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,0.25),0 8px 24px rgba(78,204,163,0.3)}
+.big-project-links .bp-btn.ghost{
+  background:rgba(255,255,255,0.04);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,0.1);color:var(--text-dim);
+}
+.big-project-links .bp-btn.ghost:hover{color:var(--text);border-color:rgba(255,255,255,0.2);transform:translateY(-2px) scale(1.02)}
+.big-project-stats{
+  display:flex;gap:16px;padding:16px 0;margin-top:8px;
+  border-top:1px solid rgba(255,255,255,0.04);
+}
+.big-project-stats .bps{display:flex;flex-direction:column}
+.big-project-stats .bps .num{font-size:1.2rem;font-weight:800;color:var(--crimson)}
+.big-project-stats .bps .lbl{font-size:0.65rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.5px}
+
+</style>
+</head>
+<body>
+<a href="#home" class="skip-link">Skip to content</a>
+<div class="bg-ambient">
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div class="bg-orb bg-orb-3"></div>
+  <div class="bg-orb bg-orb-4"></div>
+</div>
+<div class="bg-noise"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+<div id="particles"></div>
+
+<nav role="navigation" aria-label="Main navigation" id="navbar">
+  <div class="nav-logo">FARHAN<span class="accent">.</span></div>
+  <div class="nav-links" id="navLinks">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#about">About</a>
+    <a href="#big-projects">Projects</a>
+    <a href="#services">Services</a>
+    <a href="#big-projects">Projects</a>
+    <a href="#ai-lab">AI Lab</a>
+    <a href="#tech-lab">Tech Lab</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="nav-cta">Let's Talk</a>
+  <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="avail-badge">AVAILABLE FOR WORK</div>
+      <div class="avail-sub">Currently available for freelance projects & collaborations.</div>
+      <h1>Hi, I'm Farhan <span class="wave">&#128075;</span></h1>
+      <div class="hero-subtitle"><span class="accent">Creative Developer</span> &bull; <span class="amber-accent">AI Explorer</span> &bull; Tech Enthusiast</div>
+      <p class="hero-desc">I build modern websites, web experiences and digital products while constantly experimenting with new technology.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-primary">Hire Me</a>
+        <a href="#contact" class="btn btn-amber">Let's Work Together</a>
+        <a href="#projects" class="btn btn-ghost">Explore My Work</a>
+      </div>
+    </div>
+    <div class="hero-char">
+      <div class="hero-char-frame">
+        <div class="glass-sweep"></div>
+        <div class="hero-char-glow"></div>
+        <div class="hero-char-particles"><span></span><span></span><span></span><span></span><span></span></div>
+        <img src="character.webp" alt="Farhan's anime character illustration" class="hero-char-img" loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">About Me</div>
+      <h2 class="section-title">A glimpse into what <span class="accent">drives me</span></h2>
+      <p class="section-sub">What I build, what I learn, and what I'm exploring.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-card glass reveal">
+        <h3>&#9881; What I Do</h3>
+        <p>I'm Farhan — a self-taught <span class="highlight">modder, cracker, developer, and gamer</span>. I live at the intersection of curiosity and code, where the urge to tear software apart meets the discipline to build something new from the pieces.</p>
+        <p>As a <span class="highlight">modder</span>, I take games apart and reshape them. As a <span class="highlight">cracker</span>, I reverse-engineer binaries to understand protection schemes. As a <span class="highlight">developer</span>, I build tools and apps that solve real problems.</p>
+        <div class="about-tags">
+          <span class="about-tag">Web Development</span>
+          <span class="about-tag amber">AI Experiments</span>
+          <span class="about-tag teal">Reverse Engineering</span>
+          <span class="about-tag">Gaming</span>
+          <span class="about-tag amber">UI/UX Design</span>
+        </div>
+      </div>
+      <div class="about-card glass reveal">
+        <h3>&#128640; My Journey</h3>
+        <div class="timeline">
+          <div class="timeline-item"><div class="timeline-label">Started</div><div class="timeline-text">Curiosity-driven exploration of how software and games work</div></div>
+          <div class="timeline-item"><div class="timeline-label">Learned</div><div class="timeline-text">Python, JavaScript, HTML/CSS, and reverse engineering tools</div></div>
+          <div class="timeline-item"><div class="timeline-label">Built</div><div class="timeline-text">Game mods, tools, bots, and web applications</div></div>
+          <div class="timeline-item"><div class="timeline-label">Experimenting</div><div class="timeline-text">AI-assisted development and creative coding workflows</div></div>
+          <div class="timeline-item"><div class="timeline-label">Improving</div><div class="timeline-text">Modern web frameworks, UI/UX, and advanced RE techniques</div></div>
+          <div class="timeline-item"><div class="timeline-label">Future</div><div class="timeline-text">Building more digital experiences and exploring AI deeper</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I DO -->
+<section id="what-i-do">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">What I Do</div>
+      <h2 class="section-title">Six things I'm <span class="accent">passionate</span> about</h2>
+    </div>
+    <div class="cards-grid">
+      <div class="service-card glass reveal tilt-card"><span class="service-icon">&#127760;</span><h3>Web Development</h3><p>Building responsive, fast websites with HTML, CSS, and JavaScript. From portfolios to full web apps.</p></div>
+      <div class="service-card glass reveal tilt-card"><span class="service-icon">&#128241;</span><h3>App Development</h3><p>Creating web-based apps and tools — including real-time chat apps and interactive experiences.</p></div>
+      <div class="service-card glass reveal tilt-card"><span class="service-icon">&#129302;</span><h3>AI Experiments</h3><p>Exploring AI-assisted development, prompt engineering, and building AI-powered features into apps.</p></div>
+      <div class="service-card glass reveal tilt-card"><span class="service-icon">&#127912;</span><h3>UI/UX & Creative Design</h3><p>Designing clean, intuitive interfaces with glassmorphism, dark themes, and anime-inspired aesthetics.</p></div>
+      <div class="service-card glass reveal tilt-card"><span class="service-icon">&#127918;</span><h3>Gaming & Technology</h3><p>Game modding, reverse engineering, and exploring how games work under the hood. PlayStation enthusiast.</p></div>
+      <div class="service-card glass reveal tilt-card"><span class="service-icon">&#128640;</span><h3>Digital Projects</h3><p>Building digital experiences — from FPS games to real-time messaging platforms hosted on GitHub Pages.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- BIG COMPLETE PROJECTS -->
+<section id="big-projects" class="big-projects-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Flagship Projects</div>
+      <h2 class="section-title">Big Complete <span class="accent">Projects</span></h2>
+      <p class="section-sub">My most ambitious, feature-rich projects — built end-to-end with real functionality.</p>
+    </div>
+    <div class="big-projects-grid">
+
+      <!-- FARHAN CHAT -->
+      <div class="big-project-card reveal">
+        <div class="big-project-header">
+          <div class="big-project-icon chat">&#128172;</div>
+          <div>
+            <h3>Farhan Chat</h3>
+            <span class="bp-badge live">&#9679; Live</span>
+            <span class="bp-badge featured">&#11088; Featured</span>
+          </div>
+        </div>
+        <div class="big-project-body">
+          <p>Real-time WhatsApp-style messaging app with Google Sign-In, group chat, reactions, voice messages, polls, AI features, and more. Built with Firebase Realtime Database — fully functional and deployed live.</p>
+          <div class="big-project-features">
+            <div class="f-item">Google Sign-In auth</div>
+            <div class="f-item">Real-time messaging</div>
+            <div class="f-item">Group chat with roles</div>
+            <div class="f-item">Message reactions (7 emojis)</div>
+            <div class="f-item">Voice messages</div>
+            <div class="f-item">In-chat search</div>
+            <div class="f-item">Scheduled messages</div>
+            <div class="f-item">AI reply suggestions</div>
+            <div class="f-item">Text translation</div>
+            <div class="f-item">Voice-to-text (Web Speech)</div>
+            <div class="f-item">Block/report users</div>
+            <div class="f-item">Status/Story feature</div>
+            <div class="f-item">10 chat backgrounds</div>
+            <div class="f-item">500+ emojis</div>
+          </div>
+          <div class="big-project-tech">
+            <span class="bp-tag accent">JavaScript</span>
+            <span class="bp-tag amber">Firebase</span>
+            <span class="bp-tag">HTML</span>
+            <span class="bp-tag">CSS</span>
+            <span class="bp-tag teal">Real-time DB</span>
+          </div>
+          <div class="big-project-stats">
+            <div class="bps"><div class="num">15+</div><div class="lbl">Features</div></div>
+            <div class="bps"><div class="num">267KB</div><div class="lbl">Code Size</div></div>
+            <div class="bps"><div class="num">v11</div><div class="lbl">Version</div></div>
+          </div>
+          <div class="big-project-links">
+            <a href="https://farhan098english-art.github.io/Farhan-chat/" target="_blank" class="bp-btn primary">Live Demo &rarr;</a>
+            <a href="https://github.com/farhan098english-art/Farhan-chat" target="_blank" class="bp-btn ghost">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- GEMINI AI CHAT -->
+      <div class="big-project-card reveal">
+        <div class="big-project-header">
+          <div class="big-project-icon ai">&#129302;</div>
+          <div>
+            <h3>Gemini AI Chat</h3>
+            <span class="bp-badge featured">&#11088; AI-Powered</span>
+          </div>
+        </div>
+        <div class="big-project-body">
+          <p>Full-featured AI chat assistant powered by Google Gemini 2.0 Flash. Includes chat history, markdown rendering, streaming responses, voice input, prompt suggestions, custom system instructions, and temperature control.</p>
+          <div class="big-project-features">
+            <div class="f-item">Gemini 2.0 Flash API</div>
+            <div class="f-item">Streaming responses</div>
+            <div class="f-item">Markdown rendering</div>
+            <div class="f-item">Chat history sidebar</div>
+            <div class="f-item">Voice input (Web Speech)</div>
+            <div class="f-item">Prompt suggestions</div>
+            <div class="f-item">System instructions</div>
+            <div class="f-item">Temperature control</div>
+            <div class="f-item">Typing indicator</div>
+            <div class="f-item">Code block formatting</div>
+            <div class="f-item">Clear/delete chats</div>
+            <div class="f-item">Responsive design</div>
+          </div>
+          <div class="big-project-tech">
+            <span class="bp-tag teal">Gemini API</span>
+            <span class="bp-tag accent">JavaScript</span>
+            <span class="bp-tag">HTML</span>
+            <span class="bp-tag">CSS</span>
+            <span class="bp-tag amber">Web Speech API</span>
+          </div>
+          <div class="big-project-stats">
+            <div class="bps"><div class="num">14+</div><div class="lbl">Features</div></div>
+            <div class="bps"><div class="num">23KB</div><div class="lbl">Code Size</div></div>
+            <div class="bps"><div class="num">2.0</div><div class="lbl">Gemini Model</div></div>
+          </div>
+          <div class="big-project-links">
+            <a href="gemini-chat.html" target="_blank" class="bp-btn primary teal-grad">Try AI Chat &rarr;</a>
+            <a href="https://github.com/farhan098english-art/farhan-portfolio" target="_blank" class="bp-btn ghost">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Featured Projects</div>
+      <h2 class="section-title">Selected <span class="accent">Work</span></h2>
+      <p class="section-sub">Real projects, live demos, and source code. Click any project for details.</p>
+    </div>
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="websites">Websites</button>
+      <button class="filter-btn" data-filter="apps">Apps</button>
+      <button class="filter-btn" data-filter="ai">AI</button>
+      <button class="filter-btn" data-filter="experiments">Experiments</button>
+      <button class="filter-btn" data-filter="games">Games</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid">
+      <div class="project-card glass reveal" data-category="websites" onclick="openModal('portfolio')">
+        <div class="project-thumb">&#127760;</div>
+        <div class="project-info">
+          <div class="project-name">Portfolio Website</div>
+          <div class="project-desc">Premium anime-inspired portfolio with glassmorphism, particles, and interactive sections.</div>
+          <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JavaScript</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/" target="_blank" class="project-link demo">Live Demo</a>
+            <a href="https://github.com/farhan098english-art/farhan-portfolio" target="_blank" class="project-link code">Source</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="apps" onclick="openModal('chat')">
+        <div class="project-thumb">&#128172;</div>
+        <div class="project-info">
+          <div class="project-name">Farhan Chat</div>
+          <div class="project-desc">Real-time WhatsApp-style messaging app with Google login, groups, reactions, voice messages, and AI features.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Firebase</span><span class="project-tag teal">Real-time</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/Farhan-chat/" target="_blank" class="project-link demo">Live Demo</a>
+            <a href="https://github.com/farhan098english-art/Farhan-chat" target="_blank" class="project-link code">Source</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="experiments" onclick="openModal('fps')">
+        <div class="project-thumb">&#127918;</div>
+        <div class="project-info">
+          <div class="project-name">FPS Shooter Game</div>
+          <div class="project-desc">Browser-based 3D first-person shooter with AI enemies, built using Three.js.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Three.js</span><span class="project-tag">3D</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/" target="_blank" class="project-link demo">Play</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="experiments" onclick="openModal('devicekey')">
+        <div class="project-thumb">&#128273;</div>
+        <div class="project-info">
+          <div class="project-name">Device Key</div>
+          <div class="project-desc">A utility tool hosted on GitHub Pages. Explore the repository for more details.</div>
+          <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">Tool</span></div>
+          <div class="project-links">
+            <a href="https://github.com/farhan098english-art/Device-key" target="_blank" class="project-link code">Source</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="experiments" onclick="openModal('modtoolkit')">
+        <div class="project-thumb">&#9881;</div>
+        <div class="project-info">
+          <div class="project-name">Game Mod Toolkit</div>
+          <div class="project-desc">A modular toolkit for patching game files, swapping assets, and injecting custom content.</div>
+          <div class="project-tags"><span class="project-tag amber">Python</span><span class="project-tag">Modding</span></div>
+          <div class="project-links">
+            <a href="https://t.me/Flexxcheat" target="_blank" class="project-link code">Telegram</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="experiments" onclick="openModal('binalyzer')">
+        <div class="project-thumb">&#128270;</div>
+        <div class="project-info">
+          <div class="project-name">Bin Analyzer</div>
+          <div class="project-desc">Reverse engineering tool for analyzing binaries and understanding protection schemes.</div>
+          <div class="project-tags"><span class="project-tag amber">Python</span><span class="project-tag teal">RE</span></div>
+          <div class="project-links">
+            <a href="https://t.me/Flexxcheat" target="_blank" class="project-link code">Telegram</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="ai" onclick="openModal('promptforge')">
+        <div class="project-thumb">&#9889;</div>
+        <div class="project-info">
+          <div class="project-name">PromptForge</div>
+          <div class="project-desc">AI prompt-building workspace with prompt generator, improver engine, variables, library & live preview — all local, no API.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">AI</span><span class="project-tag teal">SaaS</span></div>
+          <div class="project-links">
+            <a href="javascript:void(0)" onclick="event.stopPropagation();openModal('promptforge')" class="project-link demo">Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="websites" onclick="openModal('resumecraft')">
+        <div class="project-thumb">&#128221;</div>
+        <div class="project-info">
+          <div class="project-name">ResumeCraft</div>
+          <div class="project-desc">Premium resume builder with 4 templates, live preview, customization, PDF export & localStorage — no backend needed.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">HTML</span><span class="project-tag teal">CSS</span></div>
+          <div class="project-links">
+            <a href="javascript:void(0)" onclick="event.stopPropagation();openModal('resumecraft')" class="project-link demo">Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="websites" onclick="openModal('linkhub')">
+        <div class="project-thumb">&#128279;</div>
+        <div class="project-info">
+          <div class="project-name">LinkHub</div>
+          <div class="project-desc">Personal link-in-bio page with click tracking, custom themes, and profile management.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">localStorage</span><span class="project-tag teal">UI</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/linkhub.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="websites" onclick="openModal('quicknote')">
+        <div class="project-thumb">&#128221;</div>
+        <div class="project-info">
+          <div class="project-name">QuickNote</div>
+          <div class="project-desc">Colorful sticky notes app with drag-to-reorder, color coding, and auto-save.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">localStorage</span><span class="project-tag teal">Notes</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/quicknote.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="websites" onclick="openModal('imgconv')">
+        <div class="project-thumb">&#128247;</div>
+        <div class="project-info">
+          <div class="project-name">Image Converter</div>
+          <div class="project-desc">Convert images between PNG, JPG, and WebP formats directly in the browser.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Canvas</span><span class="project-tag teal">Tool</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/image-converter.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="websites" onclick="openModal('vault')">
+        <div class="project-thumb">&#128274;</div>
+        <div class="project-info">
+          <div class="project-name">Password Vault</div>
+          <div class="project-desc">Encrypted password manager with master password lock and password generator.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Security</span><span class="project-tag teal">Tool</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/password-vault.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="websites" onclick="openModal('pomodoro')">
+        <div class="project-thumb">&#9201;</div>
+        <div class="project-info">
+          <div class="project-name">Pomodoro Timer</div>
+          <div class="project-desc">Focus timer with 25/5/15 minute modes, session tracking, and progress ring.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Productivity</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/pomodoro-timer.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="games" onclick="openModal('animequiz')">
+        <div class="project-thumb">&#127918;</div>
+        <div class="project-info">
+          <div class="project-name">Anime Quiz</div>
+          <div class="project-desc">Test your anime knowledge with 12 questions across multiple series.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Game</span><span class="project-tag teal">Anime</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/anime-quiz.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="games" onclick="openModal('typing')">
+        <div class="project-thumb">&#9000;</div>
+        <div class="project-info">
+          <div class="project-name">Typing Test</div>
+          <div class="project-desc">Measure your typing speed (WPM) and accuracy with real-time feedback.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Game</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/typing-test.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="games" onclick="openModal('memory')">
+        <div class="project-thumb">&#127183;</div>
+        <div class="project-info">
+          <div class="project-name">Memory Match</div>
+          <div class="project-desc">Flip and match anime emoji cards. Track moves and time to win.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Game</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/memory-match.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="games" onclick="openModal('tictactoe')">
+        <div class="project-thumb">&#11093;</div>
+        <div class="project-info">
+          <div class="project-name">Tic-Tac-Toe AI</div>
+          <div class="project-desc">Play against an unbeatable AI using minimax algorithm, or 2-player mode.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">AI</span><span class="project-tag teal">Game</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/tic-tac-toe.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="games" onclick="openModal('g2048')">
+        <div class="project-thumb">&#128290;</div>
+        <div class="project-info">
+          <div class="project-name">2048 Game</div>
+          <div class="project-desc">Classic 2048 puzzle game with swipe and keyboard controls.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Game</span><span class="project-tag teal">Puzzle</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/2048-game.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="websites" onclick="openModal('invoice')">
+        <div class="project-thumb">&#128196;</div>
+        <div class="project-info">
+          <div class="project-name">Invoice Generator</div>
+          <div class="project-desc">Create professional invoices with items, tax, and print/PDF export.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Business</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/invoice-generator.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="websites" onclick="openModal('meeting')">
+        <div class="project-thumb">&#9200;</div>
+        <div class="project-info">
+          <div class="project-name">Meeting Timer</div>
+          <div class="project-desc">Agenda-based meeting timer with per-topic countdown and progress tracking.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Productivity</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/meeting-timer.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="websites" onclick="openModal('habit')">
+        <div class="project-thumb">&#9989;</div>
+        <div class="project-info">
+          <div class="project-name">Habit Tracker</div>
+          <div class="project-desc">Track daily habits with streak counters, weekly view, and progress stats.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Productivity</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/habit-tracker.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="websites" onclick="openModal('expense')">
+        <div class="project-thumb">&#128176;</div>
+        <div class="project-info">
+          <div class="project-name">Expense Tracker</div>
+          <div class="project-desc">Track income and expenses with categories, weekly chart, and balance.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Finance</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/expense-tracker.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="websites" onclick="openModal('analytics')">
+        <div class="project-thumb">&#128202;</div>
+        <div class="project-info">
+          <div class="project-name">Analytics Dashboard</div>
+          <div class="project-desc">Mock analytics dashboard with visitor stats, charts, and traffic sources.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Dashboard</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/analytics-dashboard.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="experiments" onclick="openModal('gallery')">
+        <div class="project-thumb">&#127912;</div>
+        <div class="project-info">
+          <div class="project-name">Anime Gallery</div>
+          <div class="project-desc">Browse anime characters with search, filter by series, favorites, and lightbox.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Anime</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/anime-gallery.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="experiments" onclick="openModal('viz')">
+        <div class="project-thumb">&#127925;</div>
+        <div class="project-info">
+          <div class="project-name">Music Visualizer</div>
+          <div class="project-desc">Real-time audio visualizer with bars, wave, and circle modes using Web Audio API.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Audio</span><span class="project-tag teal">Canvas</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/music-visualizer.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="experiments" onclick="openModal('bday')">
+        <div class="project-thumb">&#127881;</div>
+        <div class="project-info">
+          <div class="project-name">Birthday Wish</div>
+          <div class="project-desc">Animated birthday wish page with confetti, custom name, and message.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Creative</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/birthday-wish.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="experiments" onclick="openModal('quote')">
+        <div class="project-thumb">&#128172;</div>
+        <div class="project-info">
+          <div class="project-name">Quote Generator</div>
+          <div class="project-desc">Random quote generator with anime, motivational, coding, and life categories.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Creative</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/quote-generator.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card glass reveal" data-category="experiments" onclick="openModal('palette')">
+        <div class="project-thumb">&#127913;</div>
+        <div class="project-info">
+          <div class="project-name">Color Palette</div>
+          <div class="project-desc">Generate random color palettes, copy hex codes, and save your favorites.</div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag amber">Design</span></div>
+          <div class="project-links">
+            <a href="https://farhan098english-art.github.io/farhan-portfolio/color-palette.html" target="_blank" class="project-link demo">Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="see-more-wrap" id="seeMoreWrap">
+      <button class="see-more-btn" id="seeMoreBtn" onclick="toggleMoreProjects()">
+        <span id="seeMoreText">See More Projects</span>
+        <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:40px">
+    <div class="inquiry-cta reveal">
+      <h3>Have a project similar to this?</h3>
+      <p>Let's turn your idea into reality. I'm available for new projects.</p>
+      <a href="#contact" class="btn btn-primary">Start a Project &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- AI LAB -->
+<section id="ai-lab">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">AI Lab</div>
+      <h2 class="section-title">AI <span class="accent">Experiments</span> &#129302;</h2>
+      <p class="section-sub">Exploring the intersection of AI and creative development.</p>
+    </div>
+    <div class="ai-lab glass reveal">
+      <div class="ai-core">
+        <div class="ai-core-ring"></div>
+        <div class="ai-core-ring"></div>
+        <div class="ai-core-ring"></div>
+        <div class="ai-core-center"></div>
+      </div>
+      <div class="ai-grid">
+        <div class="ai-item glass"><div class="ai-item-icon">&#127760;</div><h4>AI Website Creation</h4><p>Using AI to assist in building websites and apps</p></div>
+        <div class="ai-item glass"><div class="ai-item-icon">&#10024;</div><h4>AI Experiments</h4><p>Testing AI-powered features in real projects</p></div>
+        <div class="ai-item glass"><div class="ai-item-icon">&#129302;</div><h4>AI-Assisted Dev</h4><p>Integrating AI into development workflows</p></div>
+        <div class="ai-item glass"><div class="ai-item-icon">&#128172;</div><h4>AI in Chat App</h4><p>Reply suggestions, text improvement, voice-to-text</p></div>
+        <div class="ai-item glass"><div class="ai-item-icon">&#128221;</div><h4>Prompt Engineering</h4><p>Crafting effective prompts for better AI output</p></div>
+        <div class="ai-item glass"><div class="ai-item-icon">&#128161;</div><h4>AI-Powered Ideas</h4><p>Exploring new ways AI can enhance digital experiences</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH & GAMING LAB -->
+<section id="tech-lab">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Tech & Gaming Lab</div>
+      <h2 class="section-title">Gaming & <span class="accent">Technology</span> &#127918;</h2>
+      <p class="section-sub">Where gaming meets technology and experimentation.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="service-card glass reveal"><span class="service-icon">&#127918;</span><h3>Gaming & Mods</h3><p>PlayStation gaming, game modding, and exploring how games work under the hood. Competitive FPS, open-world RPGs, and indie gems.</p></div>
+      <div class="service-card glass reveal"><span class="service-icon">&#128187;</span><h3>Performance & Experiments</h3><p>Reverse engineering tools — Ghidra, IDA, x64dbg. Analyzing binaries and understanding protection schemes.</p></div>
+      <div class="service-card glass reveal"><span class="service-icon">&#127911;</span><h3>Graphics & Visuals</h3><p>Building 3D experiences with Three.js, anime-inspired UI design, and visual experimentation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CREATOR -->
+<section id="creator">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Creator Mode</div>
+      <h2 class="section-title">Creator <span class="accent">Identity</span> &#127909;</h2>
+    </div>
+    <div class="creator-section">
+      <div class="creator-card glass reveal">
+        <div style="font-size:48px">&#127909;</div>
+        <div class="creator-name">VEGETAISLIVE</div>
+        <div class="creator-tag">Gaming Content &bull; Creative Experiments</div>
+        <p class="creator-desc">Gaming content, creative experiments, and tech exploration. From gaming sessions to building digital experiences — this is the creator side of Farhan.</p>
+        <a href="https://t.me/Flexxcheat" target="_blank" class="btn btn-amber">Connect with Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section id="skills">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Tech Stack</div>
+      <h2 class="section-title">Technologies I <span class="accent">work with</span></h2>
+      <p class="section-sub">Tools and technologies I use every day.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-badge glass reveal"><span class="tech-icon">&#60;/&#62;</span><div class="tech-name">HTML</div><div class="tech-desc">Semantic markup</div></div>
+      <div class="tech-badge glass reveal"><span class="tech-icon">&#127912;</span><div class="tech-name">CSS</div><div class="tech-desc">Styling & layout</div></div>
+      <div class="tech-badge glass reveal"><span class="tech-icon">&#9881;</span><div class="tech-name">JavaScript</div><div class="tech-desc">Interactivity & apps</div></div>
+      <div class="tech-badge glass reveal"><span class="tech-icon">&#128013;</span><div class="tech-name">Python</div><div class="tech-desc">Automation & bots</div></div>
+      <div class="tech-badge glass reveal"><span class="tech-icon">&#128279;</span><div class="tech-name">Git</div><div class="tech-desc">Version control</div></div>
+      <div class="tech-badge glass reveal"><span class="tech-icon">&#128736;</span><div class="tech-name">GitHub</div><div class="tech-desc">Collaboration</div></div>
+      <div class="tech-badge glass reveal"><span class="tech-icon">&#129504;</span><div class="tech-name">AI Tools</div><div class="tech-desc">AI-assisted dev</div></div>
+      <div class="tech-badge glass reveal"><span class="tech-icon">&#128064;</span><div class="tech-name">UI/UX</div><div class="tech-desc">Design thinking</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GITHUB -->
+<section id="github">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">GitHub</div>
+      <h2 class="section-title">My <span class="accent">GitHub</span></h2>
+    </div>
+    <div class="github-card glass reveal">
+      <div style="font-size:48px;margin-bottom:16px">&#128187;</div>
+      <div class="github-stats">
+        <div class="github-stat"><div class="num">3</div><div class="label">Public Repos</div></div>
+        <div class="github-stat"><div class="num">3</div><div class="label">Live Sites</div></div>
+        <div class="github-stat"><div class="num">8+</div><div class="label">Technologies</div></div>
+      </div>
+      <div class="repo-list">
+        <a href="https://github.com/farhan098english-art/farhan-portfolio" target="_blank" class="repo-item">
+          <span class="repo-icon">&#127760;</span>
+          <div><div class="repo-name">farhan-portfolio</div><div style="font-size:12px;color:var(--text-mute)">Portfolio website</div></div>
+          <span class="repo-meta">HTML</span>
+        </a>
+        <a href="https://github.com/farhan098english-art/Farhan-chat" target="_blank" class="repo-item">
+          <span class="repo-icon">&#128172;</span>
+          <div><div class="repo-name">Farhan-chat</div><div style="font-size:12px;color:var(--text-mute)">Real-time chat app</div></div>
+          <span class="repo-meta">HTML</span>
+        </a>
+        <a href="https://github.com/farhan098english-art/Device-key" target="_blank" class="repo-item">
+          <span class="repo-icon">&#128273;</span>
+          <div><div class="repo-name">Device-key</div><div style="font-size:12px;color:var(--text-mute)">Utility tool</div></div>
+          <span class="repo-meta">HTML</span>
+        </a>
+      </div>
+      <a href="https://github.com/farhan098english-art" target="_blank" class="btn btn-primary">View My GitHub &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- CURRENTLY BUILDING -->
+<section id="building">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Currently Building</div>
+      <h2 class="section-title">What I'm <span class="accent">working on</span> &#128679;</h2>
+    </div>
+    <div class="currently-building reveal">
+      <div class="build-status">IN PROGRESS</div>
+      <div class="build-title">Farhan Chat — AI-Powered Messaging App</div>
+      <div class="build-desc">A real-time WhatsApp-style chat app with Google login, groups, reactions, voice messages, polls, scheduled messages, AI reply suggestions, text improvement, and voice-to-text. Built with Firebase and vanilla JavaScript.</div>
+      <div style="margin-top:16px"><a href="https://farhan098english-art.github.io/Farhan-chat/" target="_blank" class="btn btn-ghost">View Live Demo</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Stats</div>
+      <h2 class="section-title">By the <span class="accent">numbers</span></h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card glass reveal"><div class="stat-num">3</div><div class="stat-label">GitHub Repos</div></div>
+      <div class="stat-card glass reveal"><div class="stat-num">3</div><div class="stat-label">Live Projects</div></div>
+      <div class="stat-card glass reveal"><div class="stat-num">8+</div><div class="stat-label">Technologies</div></div>
+      <div class="stat-card glass reveal"><div class="stat-num">1</div><div class="stat-label">Year Coding</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FREELANCE SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Freelance Services</div>
+      <h2 class="section-title">What I Can Help You <span class="accent">Build</span></h2>
+      <p class="section-sub">From concept to deployment — I build modern, responsive, and performant web experiences.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card-f reveal">&#127760;<h3>Business Websites</h3><p>Modern responsive websites for businesses and personal brands.</p><a href="#contact" class="service-cta">Discuss This Project &rarr;</a></div>
+      <div class="service-card-f reveal">&#128187;<h3>Landing Pages</h3><p>High-converting modern landing pages for products, services and startups.</p><a href="#contact" class="service-cta">Discuss This Project &rarr;</a></div>
+      <div class="service-card-f reveal">&#127912;<h3>UI / UX Design</h3><p>Clean and modern interfaces for websites and digital products.</p><a href="#contact" class="service-cta">Discuss This Project &rarr;</a></div>
+      <div class="service-card-f reveal">&#128241;<h3>Web Apps</h3><p>Interactive web applications and dashboards built with modern tech.</p><a href="#contact" class="service-cta">Discuss This Project &rarr;</a></div>
+      <div class="service-card-f reveal">&#129302;<h3>AI-Powered Experiences</h3><p>AI-integrated websites and experimental AI interfaces.</p><a href="#contact" class="service-cta">Discuss This Project &rarr;</a></div>
+      <div class="service-card-f reveal">&#9889;<h3>Website Redesign</h3><p>Modernize existing outdated websites and improve their UI/UX.</p><a href="#contact" class="service-cta">Discuss This Project &rarr;</a></div>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="#contact" class="btn btn-primary">Discuss Your Project &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY WORK WITH ME -->
+<section id="why-me">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Why Work With Me</div>
+      <h2 class="section-title">Why <span class="accent">Work With Me?</span></h2>
+      <p class="section-sub">I focus on quality, communication, and delivering results that matter.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="w-icon">&#10024;</div><div><h4>Clean & Modern Design</h4><p>Every project is built with attention to detail and modern aesthetics.</p></div></div>
+      <div class="why-card reveal"><div class="w-icon">&#128241;</div><div><h4>Responsive Across Devices</h4><p>Websites that look and work great on mobile, tablet, and desktop.</p></div></div>
+      <div class="why-card reveal"><div class="w-icon">&#9889;</div><div><h4>Performance-Focused</h4><p>Fast-loading, optimized code that doesn't compromise on quality.</p></div></div>
+      <div class="why-card reveal"><div class="w-icon">&#128172;</div><div><h4>Clear Communication</h4><p>I keep things transparent and keep you updated throughout the project.</p></div></div>
+      <div class="why-card reveal"><div class="w-icon">&#128295;</div><div><h4>Custom Solutions</h4><p>No templates. Every project is built specifically for your needs.</p></div></div>
+      <div class="why-card reveal"><div class="w-icon">&#128640;</div><div><h4>Continuous Improvements</h4><p>I iterate and improve based on feedback to get the best result.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW I WORK -->
+<section id="process">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Work Process</div>
+      <h2 class="section-title">How I <span class="accent">Work</span></h2>
+      <p class="section-sub">A simple, transparent process from idea to delivery.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-step reveal"><div class="tl-num">1</div><h4>Share Your Idea</h4><p>You tell me what you want to build.</p></div>
+      <div class="tl-step reveal"><div class="tl-num">2</div><h4>We Discuss</h4><p>We talk requirements, scope & timeline.</p></div>
+      <div class="tl-step reveal"><div class="tl-num">3</div><h4>Plan & Design</h4><p>I create the structure and design.</p></div>
+      <div class="tl-step reveal"><div class="tl-num">4</div><h4>I Build</h4><p>Development with regular updates.</p></div>
+      <div class="tl-step reveal"><div class="tl-num">5</div><h4>You Review</h4><p>Feedback and revisions.</p></div>
+      <div class="tl-step reveal"><div class="tl-num">6</div><h4>Delivery</h4><p>Final handoff and launch.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- MY JOURNEY -->
+<section id="journey" class="journey-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">My Journey</div>
+      <h2 class="section-title">How It <span class="accent">Started</span></h2>
+      <p class="section-sub">From curiosity to creation — my path so far.</p>
+    </div>
+    <div class="journey-wrap">
+      <div class="journey-item"><div class="journey-dot"></div><div class="journey-label">Started</div><div class="journey-title">Curiosity & Discovery</div><div class="journey-desc">Fascinated by how websites and games work behind the scenes. Started exploring HTML, CSS and basic JavaScript out of pure curiosity.</div></div>
+      <div class="journey-item"><div class="journey-dot"></div><div class="journey-label">Learned</div><div class="journey-title">Building Foundations</div><div class="journey-desc">Dived deeper into JavaScript, Python and web development. Learned how to structure projects, write clean code and debug effectively.</div></div>
+      <div class="journey-item"><div class="journey-dot"></div><div class="journey-label">Built</div><div class="journey-title">First Projects</div><div class="journey-desc">Built and deployed my portfolio website and a real-time chat app on GitHub Pages. Started creating tools and utility apps.</div></div>
+      <div class="journey-item"><div class="journey-dot"></div><div class="journey-label">Experimented</div><div class="journey-title">AI & Advanced Tech</div><div class="journey-desc">Explored AI-powered interfaces, prompt engineering, Three.js 3D games and experimental web apps. Built PromptForge and 20+ mini-apps.</div></div>
+      <div class="journey-item"><div class="journey-dot"></div><div class="journey-label">Improving</div><div class="journey-title">Refining & Expanding</div><div class="journey-desc">Continuously improving my craft — learning new design patterns, optimizing performance and building better user experiences.</div></div>
+      <div class="journey-item"><div class="journey-dot"></div><div class="journey-label">Future</div><div class="journey-title">What's Next</div><div class="journey-desc">Expanding into more complex web applications, AI-integrated products and helping clients bring their ideas to life through freelance work.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-premium" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-tag">Get In Touch</div>
+      <h2 class="section-title">Let's Build Something <span class="accent">Together</span></h2>
+      <p class="section-sub">Have a project in mind? Tell me what you're building, and let's discuss how I can help.</p>
+    </div>
+    <div class="contact-cards">
+      <a href="mailto:farhan098english@gmail.com" class="contact-card reveal"><span class="cc-icon">&#9993;</span><div class="cc-label">Email</div><div class="cc-value">farhan098english@gmail.com</div></a>
+      <a href="https://github.com/farhan098english-art" target="_blank" class="contact-card reveal"><span class="cc-icon">&#128187;</span><div class="cc-label">GitHub</div><div class="cc-value">@farhan098english-art</div></a>
+      <a href="https://t.me/Flexxcheat" target="_blank" class="contact-card reveal"><span class="cc-icon">&#9992;</span><div class="cc-label">Telegram</div><div class="cc-value">@Flexxcheat</div></a>
+      <a href="https://discord.com/users/farhan062262" target="_blank" class="contact-card reveal"><span class="cc-icon">&#127881;</span><div class="cc-label">Discord</div><div class="cc-value">farhan062262</div></a>
+    </div>
+    <div class="form-card reveal">
+      <form id="inquiryForm" aria-label="Project inquiry form" onsubmit="return submitInquiry(event)">
+        <div class="form-row-2">
+          <div class="form-field"><label for="inqName">Name *</label><input type="text" id="inqName" name="name" required placeholder="Your name"></div>
+          <div class="form-field"><label for="inqEmail">Email *</label><input type="email" id="inqEmail" name="email" required placeholder="you@example.com"></div>
+        </div>
+        <div class="form-row-2">
+          <div class="form-field"><label for="inqType">Project Type</label><select id="inqType" name="type"><option value="">Select...</option><option value="Website">Website</option><option value="Landing Page">Landing Page</option><option value="Web App">Web App</option><option value="UI/UX">UI/UX</option><option value="Website Redesign">Website Redesign</option><option value="AI Project">AI Project</option><option value="Other">Other</option></select></div>
+          <div class="form-field"><label for="inqBudget">Budget Range</label><select id="inqBudget" name="budget"><option value="">Select...</option><option value="Under Rs 5,000">Under Rs 5,000</option><option value="Rs 5,000 - 15,000">Rs 5,000 - 15,000</option><option value="Rs 15,000 - 30,000">Rs 15,000 - 30,000</option><option value="Rs 30,000 - 50,000">Rs 30,000 - 50,000</option><option value="Rs 50,000+">Rs 50,000+</option><option value="Let's discuss">Let's discuss</option></select></div>
+        </div>
+        <div class="form-field"><label for="inqTimeline">Timeline</label><select id="inqTimeline" name="timeline"><option value="">Select...</option><option value="ASAP">ASAP</option><option value="1-2 Weeks">1-2 Weeks</option><option value="2-4 Weeks">2-4 Weeks</option><option value="1-2 Months">1-2 Months</option><option value="Flexible">Flexible</option></select></div>
+        <div class="form-field"><label for="inqDetails">Project Details</label><textarea id="inqDetails" name="details" placeholder="Tell me about your project, requirements, goals and timeline..."></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send Project Inquiry &rarr;</button>
+        <div class="form-success" id="formSuccess">&#9989; Thank you! Your inquiry has been prepared. Your email app should open shortly.</div>
+      </form>
+    </div>
+    <div class="email-cta">
+      <p>Prefer email?</p>
+      <a href="mailto:farhan098english@gmail.com?subject=Project Inquiry" class="btn btn-ghost">Email Me &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT MODAL -->
+<div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-label="Project details" onclick="if(event.target===this)this.classList.remove('show')">
+  <div class="modal" id="modalContent">
+    <span class="modal-close" onclick="document.getElementById('projectModal').classList.remove('show')">&times;</span>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<footer class="footer-premium">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>Farhan</h3>
+      <div class="tag">Creative Developer &bull; AI Explorer &bull; Tech Enthusiast</div>
+      <div class="avail">&#9679; Available for freelance projects & collaborations</div>
+    </div>
+    <div class="footer-links">
+      <h4>Navigate</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#big-projects">Projects</a>
+    <a href="#services">Services</a>
+      <a href="#big-projects">Projects</a>
+      <a href="#ai-lab">AI Lab</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-links">
+      <h4>Connect</h4>
+      <a href="mailto:farhan098english@gmail.com">Email</a>
+      <a href="https://github.com/farhan098english-art" target="_blank">GitHub</a>
+      <a href="https://t.me/Flexxcheat" target="_blank">Telegram</a>
+      <a href="https://discord.com/users/farhan062262" target="_blank">Discord</a>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Farhan. All rights reserved.</div>
+</footer>
+
+<script>
+
+// HERO PARALLAX (desktop only)
+var isTouchDevice=window.matchMedia('(hover:none) and (pointer:coarse)').matches;
+var prefersReducedMotion=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+if(!isTouchDevice&&!prefersReducedMotion){
+  var heroContent=document.querySelector('.hero-content');
+  var heroChar=document.querySelector('.hero-char');
+  var orbs=document.querySelectorAll('.bg-orb');
+  var cursorGlow=document.querySelector('.cursor-glow');
+  document.addEventListener('mousemove',function(e){
+    var x=(e.clientX/window.innerWidth-0.5)*2;
+    var y=(e.clientY/window.innerHeight-0.5)*2;
+    if(heroChar)heroChar.style.transform='translate('+(x*10)+'px,'+(y*8)+'px)';
+    if(heroContent)heroContent.style.transform='translate('+(x*-5)+'px,'+(y*-4)+'px)';
+    orbs.forEach(function(o,i){
+      var mult=(i+1)*3;
+      o.style.transform='translate('+(x*mult)+'px,'+(y*mult)+'px)';
+    });
+  });
+}
+
+// NAVBAR SCROLL
+var navbar=document.getElementById('navbar');
+window.addEventListener('scroll',function(){if(window.scrollY>30)navbar.classList.add('scrolled');else navbar.classList.remove('scrolled');});
+
+// MOBILE MENU
+var menuToggle=document.getElementById('menuToggle');
+var navLinks=document.getElementById('navLinks');
+menuToggle.addEventListener('click',function(){menuToggle.classList.toggle('open');navLinks.classList.toggle('open');});
+navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menuToggle.classList.remove('open');navLinks.classList.remove('open');});});
+
+// ACTIVE NAV LINK
+var sections=document.querySelectorAll('section[id]');
+var navItems=document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',function(){
+  var current='';
+  sections.forEach(function(s){if(window.scrollY>=s.offsetTop-100)current=s.id;});
+  navItems.forEach(function(a){a.classList.remove('active');if(a.getAttribute('href')==='#'+current)a.classList.add('active');});
+});
+
+// PARTICLES
+var particlesContainer=document.getElementById('particles');
+for(var i=0;i<25;i++){
+  var p=document.createElement('div');
+  p.className='particle';
+  var size=Math.random()*4+2;
+  p.style.width=size+'px';p.style.height=size+'px';
+  p.style.left=Math.random()*100+'%';
+  p.style.animationDuration=(Math.random()*15+10)+'s';
+  p.style.animationDelay=Math.random()*10+'s';
+  if(Math.random()>0.5)p.style.background='var(--amber)';
+  particlesContainer.appendChild(p);
+}
+
+// CURSOR GLOW
+var cursorGlow=document.getElementById('cursorGlow');
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.addEventListener('mousemove',function(e){cursorGlow.style.left=e.clientX+'px';cursorGlow.style.top=e.clientY+'px';});
+}else{cursorGlow.style.display='none';}
+
+// SCROLL REVEAL
+var revealEls=document.querySelectorAll('.reveal');
+var revealObserver=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');revealObserver.unobserve(e.target);}});
+},{threshold:0.1});
+revealEls.forEach(function(el){revealObserver.observe(el);});
+
+// PROJECT FILTERS
+var filterBtns=document.querySelectorAll('.filter-btn');
+
+// SEE MORE PROJECTS
+function toggleMoreProjects(){
+  var cards=document.querySelectorAll('.project-card.extra');
+  var btn=document.getElementById('seeMoreBtn');
+  var text=document.getElementById('seeMoreText');
+  var expanded=btn.classList.toggle('expanded');
+  cards.forEach(function(c){
+    if(expanded){c.classList.add('show');}
+    else{c.classList.remove('show');}
+  });
+  text.textContent=expanded?'Show Less':'See More Projects';
+}
+// Mark extra cards (5th onwards)
+(function(){
+  var cards=document.querySelectorAll('.project-card');
+  for(var i=4;i<cards.length;i++){
+    cards[i].classList.add('extra');
+  }
+  var extraCount=cards.length-4;
+  var text=document.getElementById('seeMoreText');
+  if(text && extraCount>0){
+    text.textContent='See '+extraCount+' More Projects';
+  }
+})();
+
+
+// PROJECT INQUIRY FORM (opens email client — no backend)
+function submitInquiry(e){
+  e.preventDefault();
+  var name=document.getElementById('inqName').value.trim();
+  var email=document.getElementById('inqEmail').value.trim();
+  var type=document.getElementById('inqType').value;
+  var budget=document.getElementById('inqBudget').value;
+  var timeline=document.getElementById('inqTimeline').value;
+  var details=document.getElementById('inqDetails').value.trim();
+  
+  if(!name||!email){
+    alert('Please enter your name and email.');
+    return false;
+  }
+  
+  var subject='Project Inquiry from '+name;
+  var body='Name: '+name+'\n';
+  body+='Email: '+email+'\n';
+  if(type)body+='Project Type: '+type+'\n';
+  if(budget)body+='Budget: '+budget+'\n';
+  if(timeline)body+='Timeline: '+timeline+'\n';
+  if(details)body+='\nProject Details:\n'+details+'\n';
+  
+  var mailto='mailto:farhan098english@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  window.location.href=mailto;
+  
+  document.getElementById('formSuccess').classList.add('show');
+  document.getElementById('inquiryForm').reset();
+  setTimeout(function(){document.getElementById('formSuccess').classList.remove('show');},5000);
+  return false;
+}
+
+var projectCards=document.querySelectorAll('.project-card');
+filterBtns.forEach(function(btn){
+  btn.addEventListener('click',function(){
+    filterBtns.forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    var filter=btn.dataset.filter;
+    projectCards.forEach(function(card){
+      if(filter==='all'||card.dataset.category===filter){card.style.display='block';}
+      else{card.style.display='none';}
+    });
+  });
+});
+
+// 3D TILT
+var tiltCards=document.querySelectorAll('.tilt-card');
+tiltCards.forEach(function(card){
+  card.addEventListener('mousemove',function(e){
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    var rect=card.getBoundingClientRect();
+    var x=e.clientX-rect.left;
+    var y=e.clientY-rect.top;
+    var cx=rect.width/2,cy=rect.height/2;
+    var rx=((y-cy)/cy)*-5;
+    var ry=((x-cx)/cx)*5;
+    card.style.transform='perspective(800px) rotateX('+rx+'deg) rotateY('+ry+'deg) translateY(-4px)';
+  });
+  card.addEventListener('mouseleave',function(){card.style.transform='';});
+});
+
+// MAGNETIC BUTTONS
+document.querySelectorAll('.btn-primary,.nav-cta').forEach(function(btn){
+  btn.addEventListener('mousemove',function(e){
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    var rect=btn.getBoundingClientRect();
+    var x=e.clientX-rect.left-rect.width/2;
+    var y=e.clientY-rect.top-rect.height/2;
+    btn.style.transform='translate('+(x*0.15)+'px,'+(y*0.15)+'px)';
+  });
+  btn.addEventListener('mouseleave',function(){btn.style.transform='';});
+});
+
+// PROJECT MODAL
+var projectData={
+  portfolio:{name:'Portfolio Website',icon:'&#127760;',desc:'Premium anime-inspired portfolio website built with HTML, CSS, and JavaScript. Features glassmorphism design, particle animations, scroll reveal effects, 3D tilt cards, and fully responsive layout.',features:['Glassmorphism UI design','Particle background animation','Scroll reveal animations','3D tilt cards','Magnetic buttons','Fully responsive','SEO optimized','Dark futuristic theme'],tech:['HTML','CSS','JavaScript'],role:'Designer & Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/',code:'https://github.com/farhan098english-art/farhan-portfolio'},
+  chat:{name:'Farhan Chat',icon:'&#128172;',desc:'Real-time WhatsApp-style messaging app with Google Sign-In, group chat, reactions, voice messages, polls, AI features, and more. Built with Firebase Realtime Database.',features:['Google Sign-In authentication','Real-time messaging','Group chat with admin roles','Message reactions (7 emojis)','Voice messages with playback','In-chat message search','Scheduled messages','AI reply suggestions','Text improvement & translation','Voice-to-text (Web Speech API)','Block/report users','Profile QR codes','10 chat backgrounds','500+ emojis','Status/Story feature'],tech:['JavaScript','Firebase','HTML','CSS'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/Farhan-chat/',code:'https://github.com/farhan098english-art/Farhan-chat'},
+  fps:{name:'FPS Shooter Game',icon:'&#127918;',desc:'Browser-based 3D first-person shooter game with AI enemies, built using Three.js. Features pointer lock controls, enemy AI, and medium graphics settings.',features:['3D first-person view','AI enemy combat','Pointer lock controls','Three.js rendering','Shooting mechanics','Crosshair UI'],tech:['JavaScript','Three.js','HTML'],role:'Game Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/',code:''},
+  devicekey:{name:'Device Key',icon:'&#128273;',desc:'A utility tool hosted on GitHub Pages. Repository contains the source code and documentation.',features:['GitHub Pages hosted','Utility tool'],tech:['HTML'],role:'Developer',demo:'',code:'https://github.com/farhan098english-art/Device-key'},
+  modtoolkit:{name:'Game Mod Toolkit',icon:'&#9881;',desc:'A modular toolkit for patching game files, swapping assets, and injecting custom content without breaking online checks.',features:['Game file patching','Asset swapping','Custom content injection','Modular design'],tech:['Python'],role:'Developer',demo:'',code:''},
+  binalyzer:{name:'Bin Analyzer',icon:'&#128270;',desc:'Reverse engineering tool for analyzing binaries and understanding protection schemes.',features:['Binary analysis','Protection scheme detection','Reverse engineering workflow'],tech:['Python'],role:'Developer',demo:'',code:''},
+  promptforge:{name:'PromptForge',icon:'&#9889;',desc:'AI prompt-building workspace with a structured prompt generator, local prompt improver engine, variable substitution ({{topic}}, {{audience}}), a 16-template library, search, and live preview — all running locally in the browser with zero API calls.',features:['Structured prompt generator (ROLE/CONTEXT/TASK/REQUIREMENTS/CONSTRAINTS/OUTPUT FORMAT)','Local prompt improver engine — no AI API needed','Dynamic variables with {{topic}} {{audience}} {{tone}} syntax','16 ready-to-use starter prompt templates','Dashboard with stats and recent prompts','Saved prompts with search and category filter','Copy, export TXT, export/import JSON','Keyboard shortcuts (Ctrl+K, Ctrl+S, Ctrl+Enter)','Dark/light mode','Fully responsive SaaS UI'],tech:['JavaScript','HTML','CSS','localStorage'],role:'Solo Developer',demo:'',code:''},
+  geminichat:{name:'Gemini AI Chat',icon:'&#129302;',desc:'Full-featured AI chat assistant powered by Google Gemini 2.0 Flash. Features streaming responses, markdown rendering, chat history, voice input, prompt suggestions, custom system instructions, and temperature control.',features:['Gemini 2.0 Flash API integration','Streaming responses','Markdown rendering','Chat history sidebar with management','Voice input (Web Speech API)','Prompt suggestions','Custom system instructions','Temperature/creativity control','Typing indicator animation','Code block formatting','Clear & delete chats','Responsive mobile design'],tech:['JavaScript','Gemini API','HTML','CSS'],role:'Solo Developer',demo:'',code:''},
+  resumecraft:{name:'ResumeCraft',icon:'&#128221;',desc:'Premium resume builder with 4 professional templates (Minimal, Modern, Professional, Developer), live preview, full customization, PDF export via browser print, and localStorage persistence — no backend required.',features:['4 professional resume templates','Live preview while editing','10 resume sections (Personal, Summary, Experience, Education, Projects, Skills, Certs, Achievements, Languages, Social)','Accent color, font, size & spacing customization','Add, edit, delete & reorder entries','Tag-style skills input','Autosave to localStorage','Export/import JSON','Print/Save as PDF (A4)','Dashboard with search','Dark/light mode','Fully responsive'],tech:['JavaScript','HTML','CSS','localStorage'],role:'Solo Developer',demo:'',code:''},
+  linkhub:{name:'LinkHub',icon:'&#128279;',desc:'Personal link-in-bio page with click tracking, custom themes, and profile management.',features:['Add/edit/delete links','Click tracking','Custom profile','Stats dashboard','LocalStorage persistence','Responsive design'],tech:['JavaScript','HTML','CSS','localStorage'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/linkhub.html',code:''},
+  quicknote:{name:'QuickNote',icon:'&#128221;',desc:'Colorful sticky notes app with drag-to-reorder, color coding, and auto-save.',features:['Create colored sticky notes','8 color options','Auto-save to localStorage','Delete & edit notes','Responsive grid layout'],tech:['JavaScript','HTML','CSS','localStorage'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/quicknote.html',code:''},
+  imgconv:{name:'Image Converter',icon:'&#128247;',desc:'Convert images between PNG, JPG, and WebP formats directly in the browser.',features:['Drag & drop upload','PNG/JPG/WebP conversion','Batch convert all','Quality control','No upload needed'],tech:['JavaScript','Canvas API','HTML'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/image-converter.html',code:''},
+  vault:{name:'Password Vault',icon:'&#128274;',desc:'Encrypted password manager with master password lock and password generator.',features:['Master password protection','XOR encryption','Password generator','Show/hide passwords','Copy to clipboard','Auto-save'],tech:['JavaScript','HTML','CSS'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/password-vault.html',code:''},
+  pomodoro:{name:'Pomodoro Timer',icon:'&#9201;',desc:'Focus timer with 25/5/15 minute modes, session tracking, and progress ring.',features:['Focus/Short/Long break modes','Circular progress ring','Session tracking','Focus & break time stats','Audio notification'],tech:['JavaScript','HTML','CSS','SVG'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/pomodoro-timer.html',code:''},
+  animequiz:{name:'Anime Quiz',icon:'&#127918;',desc:'Test your anime knowledge with 12 questions across multiple series.',features:['12 anime trivia questions','Multiple choice','Score tracking','Progress bar','Result screen with rating'],tech:['JavaScript','HTML','CSS'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/anime-quiz.html',code:''},
+  typing:{name:'Typing Test',icon:'&#9000;',desc:'Measure your typing speed (WPM) and accuracy with real-time feedback.',features:['Real-time WPM calculation','Accuracy percentage','Error tracking','Character-by-character feedback','Multiple text samples'],tech:['JavaScript','HTML','CSS'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/typing-test.html',code:''},
+  memory:{name:'Memory Match',icon:'&#127183;',desc:'Flip and match anime emoji cards. Track moves and time to win.',features:['8 pairs of anime emojis','Card flip animation','Move & time tracking','Win detection','Restart functionality'],tech:['JavaScript','HTML','CSS'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/memory-match.html',code:''},
+  tictactoe:{name:'Tic-Tac-Toe AI',icon:'&#11093;',desc:'Play against an unbeatable AI using minimax algorithm, or 2-player mode.',features:['Unbeatable AI (minimax algorithm)','2-player mode','Score tracking','Win detection','Clean UI'],tech:['JavaScript','HTML','CSS'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/tic-tac-toe.html',code:''},
+  g2048:{name:'2048 Game',icon:'&#128290;',desc:'Classic 2048 puzzle game with swipe and keyboard controls.',features:['Arrow key & swipe controls','Score & best score','Tile animations','Game over detection','Mobile responsive'],tech:['JavaScript','HTML','CSS'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/2048-game.html',code:''},
+  invoice:{name:'Invoice Generator',icon:'&#128196;',desc:'Create professional invoices with items, tax, and print/PDF export.',features:['Add multiple line items','Auto-calculate totals','Tax percentage support','Print/PDF export','Clean invoice layout'],tech:['JavaScript','HTML','CSS'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/invoice-generator.html',code:''},
+  meeting:{name:'Meeting Timer',icon:'&#9200;',desc:'Agenda-based meeting timer with per-topic countdown and progress tracking.',features:['Add agenda topics with time','Per-topic countdown timer','Progress bar','Mark topics as done','Pause/resume functionality'],tech:['JavaScript','HTML','CSS'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/meeting-timer.html',code:''},
+  habit:{name:'Habit Tracker',icon:'&#9989;',desc:'Track daily habits with streak counters, weekly view, and progress stats.',features:['Add custom habits','Daily check-in','7-day weekly view','Streak counter','Best streak tracking','Stats dashboard'],tech:['JavaScript','HTML','CSS','localStorage'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/habit-tracker.html',code:''},
+  expense:{name:'Expense Tracker',icon:'&#128176;',desc:'Track income and expenses with categories, weekly chart, and balance.',features:['Add income/expense transactions','7 expense categories','Weekly expense bar chart','Balance calculation','Category filtering'],tech:['JavaScript','HTML','CSS','localStorage'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/expense-tracker.html',code:''},
+  analytics:{name:'Analytics Dashboard',icon:'&#128202;',desc:'Mock analytics dashboard with visitor stats, charts, and traffic sources.',features:['4 key metric cards','Weekly visitor bar chart','Traffic source donut chart','Recent activity feed','Refresh data button'],tech:['JavaScript','HTML','CSS'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/analytics-dashboard.html',code:''},
+  gallery:{name:'Anime Gallery',icon:'&#127912;',desc:'Browse anime characters with search, filter by series, favorites, and lightbox.',features:['12 anime characters','Search by name/series','Filter by series','Favorite system','Lightbox viewer','LocalStorage favorites'],tech:['JavaScript','HTML','CSS','localStorage'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/anime-gallery.html',code:''},
+  viz:{name:'Music Visualizer',icon:'&#127925;',desc:'Real-time audio visualizer with bars, wave, and circle modes using Web Audio API.',features:['3 visualization modes (bars/wave/circle)','Upload any audio file','Real-time frequency analysis','Colorful gradients','Web Audio API'],tech:['JavaScript','Canvas API','Web Audio API'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/music-visualizer.html',code:''},
+  bday:{name:'Birthday Wish',icon:'&#127881;',desc:'Animated birthday wish page with confetti, custom name, and message.',features:['Custom recipient name','Custom message','Confetti animation','Floating balloons','Gradient title'],tech:['JavaScript','HTML','CSS'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/birthday-wish.html',code:''},
+  quote:{name:'Quote Generator',icon:'&#128172;',desc:'Random quote generator with anime, motivational, coding, and life categories.',features:['4 quote categories','Random quote generation','Favorite quotes','Copy to clipboard','20+ curated quotes'],tech:['JavaScript','HTML','CSS','localStorage'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/quote-generator.html',code:''},
+  palette:{name:'Color Palette',icon:'&#127912;',desc:'Generate random color palettes, copy hex codes, and save your favorites.',features:['Generate 5-color palettes','Click to copy hex codes','Save palettes','Copy history','HSL-based generation'],tech:['JavaScript','HTML','CSS','localStorage'],role:'Solo Developer',demo:'https://farhan098english-art.github.io/farhan-portfolio/color-palette.html',code:''},
+};
+
+function openModal(key){
+  var p=projectData[key];if(!p)return;
+  var body=document.getElementById('modalBody');
+  var html='<div class="modal-thumb">'+p.icon+'</div>';
+  html+='<h3>'+p.name+'</h3>';
+  // Case Study Structure
+  html+='<div class="modal-case"><h4>&#128203; Project Overview</h4><p>'+p.desc+'</p></div>';
+  // Problem
+  var problemText='This project addresses the need for '+p.name.toLowerCase()+' that works reliably without complex setup or backend infrastructure.';
+  if(p.name==='Farhan Chat')problemText='Users need a reliable real-time messaging app with modern features like groups, reactions and voice messages without expensive infrastructure.';
+  else if(p.name==='Portfolio Website')problemText='A developer needs a professional portfolio that showcases real projects and converts visitors into clients.';
+  else if(p.name==='FPS Shooter Game')problemText='Browser-based 3D games are often heavy and slow. This project proves that smooth FPS gameplay is possible in the browser.';
+  else if(p.name==='PromptForge')problemText='AI users struggle to write well-structured prompts. A local prompt-building tool can help without needing an external AI API.';
+  else if(p.name==='ResumeCraft')problemText='Job seekers need professional resumes quickly without expensive software or subscriptions.';
+  html+='<div class="modal-case"><h4>&#128270; Problem</h4><p>'+problemText+'</p></div>';
+  // Solution
+  var solutionText='Built using '+p.tech.join(', ')+' with focus on performance, clean UI and browser-native APIs. No external dependencies beyond what is necessary.';
+  html+='<div class="modal-case"><h4>&#9889; Solution</h4><p>'+solutionText+'</p></div>';
+  // Features
+  html+='<div class="modal-case"><h4>&#10024; Key Features</h4><ul style="padding-left:20px">';
+  p.features.forEach(function(f){html+='<li style="color:var(--text-dim);font-size:0.82rem;margin-bottom:3px">'+f+'</li>';});
+  html+='</ul></div>';
+  // Technologies
+  html+='<div class="modal-case"><h4>&#128736; Technologies</h4><div class="modal-tags">';
+  p.tech.forEach(function(t){html+='<span class="project-tag">'+t+'</span>';});
+  html+='</div></div>';
+  // Browser preview for projects with demo
+  if(p.demo){
+    html+='<div class="browser-preview"><div class="browser-header"><div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-url">'+p.demo.replace('https://','')+'</div></div><div class="browser-body">'+p.icon+'<div class="browser-open"><a href="'+p.demo+'" target="_blank">OPEN LIVE PREVIEW &rarr;</a></div></div></div>';
+  }
+  // My Role
+  html+='<div class="modal-case"><h4>&#128105;&#8205;&#128187; My Role</h4><p>'+p.role+' — designed, developed and deployed this project independently.</p></div>';
+  // Links
+  html+='<div class="modal-links">';
+  if(p.demo)html+='<a href="'+p.demo+'" target="_blank" class="btn btn-primary">Live Demo</a>';
+  if(p.code)html+='<a href="'+p.code+'" target="_blank" class="btn btn-ghost">View Source</a>';
+  html+='<a href="#contact" class="btn btn-ghost" onclick="document.getElementById(\'projectModal\').classList.remove(\'show\')">Start a Similar Project &rarr;</a>';
+  html+='</div>';
+  body.innerHTML=html;
+  document.getElementById('projectModal').classList.add('show');
+}
+</script>
+</body>
+</html>
